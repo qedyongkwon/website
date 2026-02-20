@@ -40,7 +40,7 @@
   "@type": "DentalLaboratory",
   "name": "Pi Dental Lab",
   "url": "https://www.pi-dentallab.com",
-  "email": "support@pi-dentallab.com",
+  "email": "",
   "description": "Premium dental laboratory in Southern California offering crowns, bridges, implants, veneers, and full-mouth restorations with two dedicated production lines.",
   "address": {
     "@type": "PostalAddress",
@@ -426,12 +426,12 @@ footer .footer-logo{height:28px;margin-bottom:.8rem;opacity:.4;transition:opacit
   <h2>Ready to get started?</h2>
   <p>Trial cases · Price list · Oral scanner demo</p>
   <div class="cta-actions">
-    <a href="mailto:support@pi-dentallab.com" class="btn-primary">Request Trial Case →</a>
-    <a href="tel:415-216-7230" class="btn-secondary">Call or Text</a>
+    <a href="#" class="btn-primary" id="ctaEmail">Request Trial Case →</a>
+    <a href="#" class="btn-secondary" id="ctaPhone">Call or Text</a>
   </div>
   <div class="cta-contact">
-    <div class="cta-contact-item"><div class="label">Email</div><a href="mailto:support@pi-dentallab.com">support@pi-dentallab.com</a></div>
-    <div class="cta-contact-item"><div class="label">Call or Text</div><a href="tel:415-216-7230">415-216-7230</a></div>
+    <div class="cta-contact-item"><div class="label">Email</div><a href="#" id="contactEmail"></a></div>
+    <div class="cta-contact-item"><div class="label">Call or Text</div><a href="#" id="contactPhone"></a></div>
     <div class="cta-contact-item"><div class="label">Web</div><a href="https://www.pi-dentallab.com">www.pi-dentallab.com</a></div>
   </div>
 </div></section>
@@ -514,6 +514,22 @@ document.querySelectorAll('.stat-num').forEach(el=>{
   },{threshold:0.5});
   io.observe(el);
 });
+</script>
+<script>
+// Anti-scrape: inject contact info via JS (bots only read HTML source)
+(function(){
+  var e=['su','pp','or','t@','pi','-d','en','ta','ll','ab','.c','om'];
+  var p=['4','1','5','-','2','1','6','-','7','2','3','0'];
+  var email=e.join('');var phone=p.join('');
+  var mLink='mai'+'lto:'+email;var tLink='te'+'l:'+phone;
+  document.getElementById('ctaEmail').href=mLink;
+  document.getElementById('ctaPhone').href=tLink;
+  document.getElementById('ctaPhone').textContent='Call or Text';
+  document.getElementById('contactEmail').href=mLink;
+  document.getElementById('contactEmail').textContent=email;
+  document.getElementById('contactPhone').href=tLink;
+  document.getElementById('contactPhone').textContent=phone;
+})();
 </script>
 </body>
 </html>
