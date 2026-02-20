@@ -3,137 +3,259 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PI Dental Lab — Built for Real-World Dentistry</title>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<title>Pi Dental Lab | Premium Dental Laboratory in Southern California</title>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Pi Dental Lab is a premium dental laboratory in Southern California offering crowns, bridges, implants, veneers, and full-mouth restorations. Two production lines — milled-to-finish and hand-layered esthetics. Free scanner lease available.">
+<meta name="keywords" content="dental lab, dental laboratory, dental lab near me, dental lab Southern California, dental lab California, crowns and bridges, dental implants, zirconia crowns, porcelain veneers, dental restorations, CAD CAM dental, intraoral scanner, dental lab Tustin, dental lab Orange County, dental lab Los Angeles">
+<meta name="author" content="Pi Dental Lab">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.pi-dentallab.com/">
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pi Dental Lab | Premium Dental Laboratory">
+<meta property="og:description" content="Built for real-world dentistry. Two production lines, flexible scanner options, and simple case management. Serving dental practices across Southern California.">
+<meta property="og:url" content="https://www.pi-dentallab.com/">
+<meta property="og:site_name" content="Pi Dental Lab">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pi Dental Lab | Premium Dental Laboratory">
+<meta name="twitter:description" content="Built for real-world dentistry. Two production lines, flexible scanner options, and simple case management.">
+
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DentalLaboratory",
+  "name": "Pi Dental Lab",
+  "url": "https://www.pi-dentallab.com",
+  "email": "support@pi-dentallab.com",
+  "description": "Premium dental laboratory in Southern California offering crowns, bridges, implants, veneers, and full-mouth restorations with two dedicated production lines.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "California"
+  },
+  "serviceType": ["Dental Crowns", "Dental Bridges", "Dental Implants", "Porcelain Veneers", "Zirconia Restorations", "Full-Mouth Restorations"],
+  "knowsAbout": ["CAD/CAM Dentistry", "Digital Dentistry", "Intraoral Scanners", "Dental Prosthetics"]
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0A1628;--navy-light:#122240;--navy-mid:#1A2E4A;--teal:#00BFA6;--teal-dim:rgba(0,191,166,0.15);--teal-glow:rgba(0,191,166,0.3);--copper:#C8703C;--white:#F8FAFB;--gray:#4A5568;--gray-light:#E2E8F0;--gray-muted:#8A95A5;--text:#CBD5E0;--sans:'Outfit',system-ui,sans-serif;--serif:'DM Serif Display',Georgia,serif}
+:root{--navy:#080E1A;--navy-light:#0E1829;--navy-mid:#162240;--accent:#00D4AA;--accent-dim:rgba(0,212,170,0.1);--accent-glow:rgba(0,212,170,0.25);--gold:#C9944A;--gold-dim:rgba(201,148,74,0.1);--white:#F0F4F8;--gray:#4A5568;--gray-light:#E2E8F0;--gray-muted:#7A8699;--text:#B0BEC5;--sans:'Outfit',system-ui,sans-serif;--serif:'Playfair Display',Georgia,serif}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--navy);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
-::selection{background:var(--teal);color:var(--navy)}::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--navy)}::-webkit-scrollbar-thumb{background:var(--navy-mid);border-radius:3px}
+::selection{background:var(--accent);color:var(--navy)}::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--navy)}::-webkit-scrollbar-thumb{background:var(--navy-mid);border-radius:3px}
 .container{max-width:1200px;margin:0 auto;padding:0 2rem}
-body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");background-repeat:repeat;opacity:0.4}
-.cursor-glow{position:fixed;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(0,191,166,0.06) 0%,transparent 70%);pointer-events:none;z-index:1;transform:translate(-50%,-50%);will-change:transform}
+
+/* Subtle grain overlay */
+body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");background-repeat:repeat;opacity:0.35}
+
+/* Cursor glow */
+.cursor-glow{position:fixed;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(0,212,170,0.04) 0%,transparent 70%);pointer-events:none;z-index:1;transform:translate(-50%,-50%);will-change:transform;transition:opacity .3s}
+
+/* Ambient particles */
 .particles{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.particle{position:absolute;width:2px;height:2px;border-radius:50%;background:var(--teal);opacity:0;animation:particleFloat linear infinite}
-@keyframes particleFloat{0%{opacity:0;transform:translateY(100vh) scale(0)}10%{opacity:.6}90%{opacity:.6}100%{opacity:0;transform:translateY(-10vh) scale(1)}}
-.scanline{position:fixed;top:0;left:0;right:0;height:1px;z-index:9998;background:linear-gradient(90deg,transparent,var(--teal),transparent);opacity:.12;pointer-events:none;animation:scanMove 6s linear infinite}
-@keyframes scanMove{0%{top:-2px}100%{top:100vh}}
-.nav{position:fixed;top:0;width:100%;z-index:100;padding:1.2rem 0;background:rgba(10,22,40,0.85);backdrop-filter:blur(20px) saturate(1.4);border-bottom:1px solid rgba(255,255,255,0.04);transition:all .4s}
-.nav.scrolled{padding:.8rem 0;background:rgba(10,22,40,0.95)}.nav .container{display:flex;justify-content:space-between;align-items:center}
-.nav-logo{height:36px}.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
-.nav-links a{color:var(--gray-muted);text-decoration:none;font-size:.92rem;font-weight:500;letter-spacing:.02em;transition:color .3s}.nav-links a:hover{color:#fff}
-.nav-cta{background:var(--teal);color:var(--navy)!important;font-weight:700!important;padding:.55rem 1.4rem;border-radius:8px;font-size:.82rem!important;letter-spacing:.04em;transition:all .3s}
-.nav-cta:hover{background:#fff;transform:translateY(-1px);box-shadow:0 4px 20px var(--teal-glow)}
-.mobile-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px}.mobile-toggle span{display:block;width:22px;height:2px;background:#fff;margin:5px 0}
+.particle{position:absolute;width:1.5px;height:1.5px;border-radius:50%;background:var(--accent);opacity:0;animation:particleFloat linear infinite}
+@keyframes particleFloat{0%{opacity:0;transform:translateY(100vh) scale(0)}10%{opacity:.4}90%{opacity:.4}100%{opacity:0;transform:translateY(-10vh) scale(1)}}
+
+/* Navigation */
+.nav{position:fixed;top:0;width:100%;z-index:100;padding:1.2rem 0;background:rgba(8,14,26,0.7);backdrop-filter:blur(24px) saturate(1.6);border-bottom:1px solid rgba(255,255,255,0.03);transition:all .4s}
+.nav.scrolled{padding:.7rem 0;background:rgba(8,14,26,0.95);border-bottom-color:rgba(0,212,170,0.08)}
+.nav .container{display:flex;justify-content:space-between;align-items:center}
+.nav-logo{height:36px;transition:opacity .3s}.nav-logo:hover{opacity:.8}
+.nav-links{display:flex;align-items:center;gap:2.2rem;list-style:none}
+.nav-links a{color:var(--gray-muted);text-decoration:none;font-size:.88rem;font-weight:500;letter-spacing:.03em;transition:color .3s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--accent);transition:width .3s}.nav-links a:hover::after{width:100%}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:var(--accent)!important;color:var(--navy)!important;font-weight:700!important;padding:.55rem 1.5rem!important;border-radius:8px;font-size:.8rem!important;letter-spacing:.06em;transition:all .3s!important;border:none}
+.nav-cta::after{display:none!important}
+.nav-cta:hover{background:#fff!important;transform:translateY(-1px);box-shadow:0 4px 24px var(--accent-glow)}
+.mobile-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px;position:relative;z-index:101}.mobile-toggle span{display:block;width:22px;height:1.5px;background:#fff;margin:5px 0;transition:all .3s}
+
+/* Hero */
 .hero{min-height:100vh;display:flex;align-items:center;position:relative;padding-top:80px;overflow:hidden;z-index:2}
-.hero::before{content:'';position:absolute;top:-30%;right:-15%;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,var(--teal-dim) 0%,transparent 70%);animation:pulse 8s ease-in-out infinite}
-.hero::after{content:'';position:absolute;bottom:-20%;left:-10%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(200,112,60,0.06) 0%,transparent 70%);animation:pulse 12s ease-in-out infinite reverse}
-@keyframes pulse{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(1.1);opacity:1}}
+.hero::before{content:'';position:absolute;top:-20%;right:-10%;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(0,212,170,0.06) 0%,transparent 65%);animation:drift 12s ease-in-out infinite}
+.hero::after{content:'';position:absolute;bottom:-15%;left:-8%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(201,148,74,0.04) 0%,transparent 65%);animation:drift 16s ease-in-out infinite reverse}
+@keyframes drift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-20px) scale(1.08)}}
+
+/* Decorative grid lines */
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse at 30% 50%,black 20%,transparent 70%)}
+
 .hero-content{position:relative;z-index:2;max-width:720px}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,191,166,0.08);border:1px solid rgba(0,191,166,0.2);padding:.4rem 1rem;border-radius:50px;margin-bottom:2rem;font-size:.78rem;font-weight:600;color:var(--teal);letter-spacing:.06em;text-transform:uppercase}
-.hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--teal);animation:blink 2s infinite}
-.hero-badge::after{content:'';display:inline-block;width:2px;height:12px;background:var(--teal);margin-left:4px;animation:blink 1s step-end infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.hero h1{font-family:var(--serif);font-size:clamp(3rem,6vw,5.5rem);font-weight:400;line-height:1.05;color:#fff;margin-bottom:1.5rem;letter-spacing:-.02em}
-.hero h1 em{font-style:italic;background:linear-gradient(120deg,var(--teal) 0%,#7BFFE8 25%,var(--teal) 50%,#7BFFE8 75%,var(--teal) 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 4s linear infinite}
+
+/* Hero brand */
+.hero-brand{display:flex;align-items:center;gap:1.2rem;margin-bottom:2.5rem}
+.hero-brand img{height:72px;filter:drop-shadow(0 0 40px rgba(0,212,170,0.12))}
+.hero-brand-divider{width:1px;height:48px;background:linear-gradient(180deg,transparent,rgba(0,212,170,0.3),transparent)}
+.hero-brand-text{display:flex;flex-direction:column;gap:.2rem}
+.hero-brand-name{font-family:var(--serif);font-size:2.2rem;color:#fff;letter-spacing:.01em;line-height:1.1;font-weight:500}
+.hero-brand-tagline{font-size:.72rem;color:var(--accent);font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+
+/* Badge */
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,170,0.06);border:1px solid rgba(0,212,170,0.15);padding:.4rem 1.1rem;border-radius:50px;margin-bottom:2rem;font-size:.75rem;font-weight:600;color:var(--accent);letter-spacing:.07em;text-transform:uppercase}
+.hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse-dot 2s infinite}
+@keyframes pulse-dot{0%,100%{opacity:1;box-shadow:0 0 0 0 var(--accent-glow)}50%{opacity:.7;box-shadow:0 0 0 6px transparent}}
+
+.hero h1{font-family:var(--serif);font-size:clamp(2.8rem,5.5vw,5rem);font-weight:400;line-height:1.08;color:#fff;margin-bottom:1.5rem;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;background:linear-gradient(120deg,var(--accent) 0%,#7BFFE8 30%,var(--accent) 60%,#7BFFE8 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 5s linear infinite}
 @keyframes shimmer{0%{background-position:0% center}100%{background-position:200% center}}
-.hero-sub{font-size:1.15rem;color:var(--gray-muted);line-height:1.7;margin-bottom:2.5rem;max-width:520px}
+
+.hero-sub{font-size:1.1rem;color:var(--gray-muted);line-height:1.75;margin-bottom:2.5rem;max-width:520px;font-weight:300}
 .hero-actions{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
-.btn-primary{display:inline-flex;align-items:center;gap:8px;position:relative;overflow:hidden;background:var(--teal);color:var(--navy);font-weight:700;padding:1rem 2rem;border-radius:12px;text-decoration:none;font-size:.95rem;transition:all .3s;box-shadow:0 4px 24px var(--teal-glow)}
-.btn-primary::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at var(--mouse-x,50%) var(--mouse-y,50%),rgba(255,255,255,0.2),transparent 60%);opacity:0;transition:opacity .3s}
-.btn-primary:hover{background:#fff;transform:translateY(-2px);box-shadow:0 8px 32px rgba(255,255,255,0.15)}.btn-primary:hover::before{opacity:1}
-.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--gray-muted);font-weight:500;padding:1rem 1.5rem;border-radius:12px;text-decoration:none;font-size:.95rem;border:1px solid rgba(255,255,255,0.1);transition:all .3s}
-.btn-secondary:hover{border-color:var(--teal);color:var(--teal)}
-.hero-stats{display:flex;gap:3rem;margin-top:4rem;padding-top:3rem;border-top:1px solid rgba(255,255,255,0.06)}
-.stat-num{font-family:var(--serif);font-size:2.5rem;color:#fff;line-height:1;margin-bottom:.3rem;font-variant-numeric:tabular-nums}
-.stat-label{font-size:.8rem;color:var(--gray-muted);letter-spacing:.04em}
+
+/* Buttons */
+.btn-primary{display:inline-flex;align-items:center;gap:8px;position:relative;overflow:hidden;background:var(--accent);color:var(--navy);font-weight:700;padding:1rem 2.2rem;border-radius:12px;text-decoration:none;font-size:.92rem;transition:all .35s;box-shadow:0 4px 28px var(--accent-glow);letter-spacing:.02em}
+.btn-primary::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at var(--mouse-x,50%) var(--mouse-y,50%),rgba(255,255,255,0.25),transparent 60%);opacity:0;transition:opacity .3s}
+.btn-primary:hover{background:#fff;transform:translateY(-2px);box-shadow:0 8px 40px rgba(255,255,255,0.12)}.btn-primary:hover::before{opacity:1}
+
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--gray-muted);font-weight:500;padding:1rem 1.6rem;border-radius:12px;text-decoration:none;font-size:.92rem;border:1px solid rgba(255,255,255,0.08);transition:all .35s;letter-spacing:.02em}
+.btn-secondary:hover{border-color:var(--accent);color:var(--accent);background:rgba(0,212,170,0.04)}
+
+/* Stats */
+.hero-stats{display:flex;gap:3rem;margin-top:4rem;padding-top:3rem;border-top:1px solid rgba(255,255,255,0.05)}
+.stat-num{font-family:var(--serif);font-size:2.6rem;color:#fff;line-height:1;margin-bottom:.3rem;font-variant-numeric:tabular-nums}
+.stat-label{font-size:.78rem;color:var(--gray-muted);letter-spacing:.04em;font-weight:400}
+
+/* Sections */
 section{padding:7rem 0;position:relative;z-index:2}
-.section-label{font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:1rem;display:flex;align-items:center;gap:10px}
-.section-label::before{content:'';width:24px;height:1px;background:var(--teal)}
-.section-title{font-family:var(--serif);font-size:clamp(2rem,4vw,3.2rem);color:#fff;line-height:1.15;margin-bottom:1.2rem}
-.section-desc{font-size:1.05rem;color:var(--gray-muted);max-width:560px;line-height:1.7}
-.glow-divider{width:100%;height:1px;border:none;margin:0;background:linear-gradient(90deg,transparent 0%,var(--teal) 50%,transparent 100%);opacity:.2;position:relative;z-index:2}
+.section-label{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;display:flex;align-items:center;gap:12px}
+.section-label::before{content:'';width:28px;height:1px;background:linear-gradient(90deg,var(--accent),transparent)}
+.section-title{font-family:var(--serif);font-size:clamp(2rem,4vw,3.2rem);color:#fff;line-height:1.15;margin-bottom:1.2rem;font-weight:400}
+.section-desc{font-size:1.02rem;color:var(--gray-muted);max-width:560px;line-height:1.75;font-weight:300}
+
+/* Divider */
+.glow-divider{width:100%;height:1px;border:none;margin:0;background:linear-gradient(90deg,transparent 0%,var(--accent) 50%,transparent 100%);opacity:.15;position:relative;z-index:2}
+
+/* Value Cards */
 .values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:4rem}
-.value-card{background:linear-gradient(145deg,rgba(18,34,64,0.8),rgba(10,22,40,0.6));border:1px solid rgba(255,255,255,0.05);border-radius:16px;padding:2.2rem;transition:all .4s;position:relative;overflow:hidden}
-.value-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--teal),transparent);opacity:0;transition:opacity .4s}
-.value-card::after{content:'';position:absolute;inset:-1px;border-radius:inherit;background:conic-gradient(from 180deg,transparent,var(--teal),transparent,transparent);z-index:-1;opacity:0;transition:opacity .5s}
-.value-card:hover{border-color:rgba(0,191,166,0.15);transform:translateY(-4px)}.value-card:hover::before{opacity:1}.value-card:hover::after{opacity:.15}
-.value-icon{width:44px;height:44px;border-radius:10px;margin-bottom:1.2rem;display:flex;align-items:center;justify-content:center;background:var(--teal-dim);color:var(--teal)}
-.value-card h3{font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:.6rem}
-.value-card p{font-size:.92rem;color:var(--gray-muted);line-height:1.75}
+.value-card{background:linear-gradient(160deg,rgba(14,24,41,0.9),rgba(8,14,26,0.7));border:1px solid rgba(255,255,255,0.04);border-radius:20px;padding:2.4rem;transition:all .45s;position:relative;overflow:hidden}
+.value-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity .4s}
+.value-card::after{content:'';position:absolute;inset:-1px;border-radius:inherit;background:conic-gradient(from 180deg,transparent,var(--accent),transparent,transparent);z-index:-1;opacity:0;transition:opacity .5s}
+.value-card:hover{border-color:rgba(0,212,170,0.12);transform:translateY(-6px)}.value-card:hover::before{opacity:1}.value-card:hover::after{opacity:.1}
+.value-icon{width:48px;height:48px;border-radius:12px;margin-bottom:1.4rem;display:flex;align-items:center;justify-content:center;background:var(--accent-dim);color:var(--accent);transition:all .3s}
+.value-card:hover .value-icon{background:rgba(0,212,170,0.15);box-shadow:0 0 20px rgba(0,212,170,0.1)}
+.value-card h3{font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:.7rem;letter-spacing:.01em}
+.value-card p{font-size:.9rem;color:var(--gray-muted);line-height:1.8}
+
+/* Production Cards */
 .production-section{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-light) 100%)}
 .prod-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3rem}
-.prod-card{border-radius:20px;padding:2.8rem;position:relative;overflow:hidden;transition:all .4s}
-.prod-card.everyday{background:linear-gradient(160deg,#0D1F38,#132A4A);border:1px solid rgba(0,191,166,0.1)}
-.prod-card.esthetic{background:linear-gradient(160deg,#1A1520,#1F1A2D);border:1px solid rgba(200,112,60,0.15)}
-.prod-card:hover{transform:translateY(-4px)}
-.prod-tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.35rem .9rem;border-radius:6px;margin-bottom:1.2rem}
-.everyday .prod-tag{background:var(--teal-dim);color:var(--teal)}.esthetic .prod-tag{background:rgba(200,112,60,0.12);color:var(--copper)}
-.prod-card h3{font-family:var(--serif);font-size:1.8rem;color:#fff;margin-bottom:.6rem}
-.prod-card .prod-sub{font-size:.95rem;color:var(--gray-muted);margin-bottom:1.2rem}
-.prod-card ul{list-style:none}.prod-card li{padding:.45rem 0;font-size:.92rem;color:var(--text);padding-left:1.4rem;position:relative;line-height:1.75}
-.everyday li::before{content:'✓';position:absolute;left:0;color:var(--teal);font-weight:700}
-.esthetic li::before{content:'✦';position:absolute;left:0;color:var(--copper);font-size:.7rem}
-.prod-quote{margin-top:3rem;padding:2rem;border-radius:14px;background:linear-gradient(135deg,rgba(0,191,166,0.04),rgba(200,112,60,0.04));border-left:3px solid var(--teal);text-align:center}
-.prod-quote p{font-family:var(--serif);font-size:1.3rem;color:#fff;font-style:italic}
-.scanner-section{background:var(--navy)}.scanner-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
-.scanner-card{background:linear-gradient(160deg,var(--navy-light),var(--navy));border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:2.5rem 2rem;text-align:center;transition:all .4s;position:relative}
-.scanner-card::after{content:'';position:absolute;inset:-1px;border-radius:inherit;background:conic-gradient(from 180deg,transparent,var(--teal),transparent,transparent);z-index:-1;opacity:0;transition:opacity .5s}
-.scanner-card:hover{border-color:rgba(0,191,166,0.2);transform:translateY(-4px)}.scanner-card:hover::after{opacity:.15}
-.scanner-card.featured{border-color:var(--teal);background:linear-gradient(160deg,rgba(0,191,166,0.06),var(--navy))}
-.scanner-num{font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:1rem}
+.prod-card{border-radius:24px;padding:3rem;position:relative;overflow:hidden;transition:all .45s}
+.prod-card.everyday{background:linear-gradient(160deg,#0C1C32,#112844);border:1px solid rgba(0,212,170,0.08)}
+.prod-card.esthetic{background:linear-gradient(160deg,#1A1520,#201A2E);border:1px solid rgba(201,148,74,0.1)}
+.prod-card:hover{transform:translateY(-6px)}
+.prod-tag{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.4rem 1rem;border-radius:8px;margin-bottom:1.4rem}
+.everyday .prod-tag{background:var(--accent-dim);color:var(--accent)}
+.esthetic .prod-tag{background:var(--gold-dim);color:var(--gold)}
+.prod-card h3{font-family:var(--serif);font-size:1.8rem;color:#fff;margin-bottom:.6rem;font-weight:400}
+.prod-card .prod-sub{font-size:.92rem;color:var(--gray-muted);margin-bottom:1.4rem;font-weight:300}
+.prod-card ul{list-style:none}
+.prod-card li{padding:.5rem 0;font-size:.9rem;color:var(--text);padding-left:1.5rem;position:relative;line-height:1.8}
+.everyday li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:700}
+.esthetic li::before{content:'✦';position:absolute;left:0;color:var(--gold);font-size:.7rem;top:.6rem}
+.prod-quote{margin-top:3rem;padding:2.2rem;border-radius:16px;background:linear-gradient(135deg,rgba(0,212,170,0.03),rgba(201,148,74,0.03));border-left:3px solid var(--accent);text-align:center}
+.prod-quote p{font-family:var(--serif);font-size:1.3rem;color:#fff;font-style:italic;font-weight:400}
+
+/* Scanner Cards */
+.scanner-section{background:var(--navy)}
+.scanner-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.scanner-card{background:linear-gradient(160deg,var(--navy-light),var(--navy));border:1px solid rgba(255,255,255,0.05);border-radius:20px;padding:2.8rem 2rem;text-align:center;transition:all .45s;position:relative}
+.scanner-card::after{content:'';position:absolute;inset:-1px;border-radius:inherit;background:conic-gradient(from 180deg,transparent,var(--accent),transparent,transparent);z-index:-1;opacity:0;transition:opacity .5s}
+.scanner-card:hover{border-color:rgba(0,212,170,0.15);transform:translateY(-6px)}.scanner-card:hover::after{opacity:.12}
+.scanner-card.featured{border-color:rgba(0,212,170,0.2);background:linear-gradient(160deg,rgba(0,212,170,0.05),var(--navy))}
+.scanner-card.featured::before{content:'Most Popular';position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--navy);font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem 1rem;border-radius:0 0 8px 8px}
+.scanner-num{font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem}
 .scanner-card h4{font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:.8rem}
-.scanner-price{font-family:var(--serif);font-size:2rem;color:var(--teal);margin:1rem 0;line-height:1}
+.scanner-price{font-family:var(--serif);font-size:2.2rem;color:var(--accent);margin:1rem 0;line-height:1;font-weight:400}
 .scanner-price small{font-size:.8rem;font-family:var(--sans);color:var(--gray-muted)}
-.scanner-card ul{list-style:none;text-align:left;margin-top:1.2rem}
-.scanner-card li{padding:.4rem 0;font-size:.92rem;color:var(--text);padding-left:1.4rem;position:relative;line-height:1.75}
-.scanner-card li::before{content:'→';position:absolute;left:0;color:var(--teal)}
-.scanner-note{text-align:center;margin-top:2rem;font-size:.95rem;color:var(--gray-muted);font-style:italic}
+.scanner-card ul{list-style:none;text-align:left;margin-top:1.4rem}
+.scanner-card li{padding:.45rem 0;font-size:.9rem;color:var(--text);padding-left:1.4rem;position:relative;line-height:1.8}
+.scanner-card li::before{content:'→';position:absolute;left:0;color:var(--accent)}
+.scanner-note{text-align:center;margin-top:2rem;font-size:.92rem;color:var(--gray-muted);font-style:italic}
+
+/* Team */
 .team-section{background:linear-gradient(180deg,var(--navy-light),var(--navy))}
 .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3rem}
-.team-card{background:linear-gradient(160deg,rgba(18,34,64,0.6),rgba(10,22,40,0.4));border:1px solid rgba(255,255,255,0.05);border-radius:20px;padding:2.5rem;transition:all .4s}
-.team-card:hover{border-color:rgba(255,255,255,0.1)}
-.team-avatar{width:72px;height:72px;border-radius:16px;margin-bottom:1.2rem;display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:800;color:#fff}
-.team-card h3{font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:.2rem}
-.team-role{font-size:.82rem;font-weight:600;color:var(--teal);margin-bottom:1rem;letter-spacing:.03em}
-.team-card p{font-size:.92rem;color:var(--gray-muted);line-height:1.75}
-.team-card blockquote{margin-top:1.2rem;padding-left:1rem;border-left:2px solid var(--teal);font-style:italic;font-size:.92rem;color:var(--text);line-height:1.6}
-.platform-section{background:var(--navy)}.platform-features{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:3rem}
-.plat-item{display:flex;align-items:flex-start;gap:1rem;padding:1.5rem;border-radius:12px;background:rgba(18,34,64,0.5);border:1px solid rgba(255,255,255,0.04);transition:all .3s}
-.plat-item:hover{border-color:rgba(0,191,166,0.1);background:rgba(18,34,64,0.8)}
-.plat-icon{width:36px;height:36px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:var(--teal-dim);color:var(--teal)}
-.plat-item h4{font-size:.95rem;font-weight:600;color:#fff;margin-bottom:.3rem}
-.plat-item p{font-size:.92rem;color:var(--gray-muted);line-height:1.75}
-.cta-section{padding:6rem 0;text-align:center;position:relative;z-index:2;background:linear-gradient(180deg,var(--navy),var(--navy-light));overflow:hidden}
-.cta-section::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,var(--teal-dim) 0%,transparent 70%)}
-.cta-content{position:relative;z-index:2}.cta-content h2{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:1rem}
-.cta-content p{color:var(--gray-muted);font-size:1.05rem;margin-bottom:2rem}
+.team-card{background:linear-gradient(160deg,rgba(14,24,41,0.7),rgba(8,14,26,0.5));border:1px solid rgba(255,255,255,0.04);border-radius:24px;padding:2.8rem;transition:all .45s}
+.team-card:hover{border-color:rgba(255,255,255,0.08);transform:translateY(-4px)}
+.team-avatar{width:72px;height:72px;border-radius:18px;margin-bottom:1.4rem;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:800;color:#fff;letter-spacing:.02em}
+.team-card h3{font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:.25rem}
+.team-role{font-size:.8rem;font-weight:600;color:var(--accent);margin-bottom:1.1rem;letter-spacing:.04em}
+.team-card p{font-size:.9rem;color:var(--gray-muted);line-height:1.8}
+.team-card blockquote{margin-top:1.2rem;padding-left:1rem;border-left:2px solid var(--accent);font-style:italic;font-size:.9rem;color:var(--text);line-height:1.7}
+
+/* Platform */
+.platform-section{background:var(--navy)}
+.platform-features{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:3rem}
+.plat-item{display:flex;align-items:flex-start;gap:1rem;padding:1.6rem;border-radius:14px;background:rgba(14,24,41,0.6);border:1px solid rgba(255,255,255,0.03);transition:all .35s}
+.plat-item:hover{border-color:rgba(0,212,170,0.08);background:rgba(14,24,41,0.9);transform:translateY(-2px)}
+.plat-icon{width:38px;height:38px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:var(--accent-dim);color:var(--accent)}
+.plat-item h4{font-size:.92rem;font-weight:600;color:#fff;margin-bottom:.35rem}
+.plat-item p{font-size:.88rem;color:var(--gray-muted);line-height:1.8}
+
+/* CTA */
+.cta-section{padding:7rem 0;text-align:center;position:relative;z-index:2;background:linear-gradient(180deg,var(--navy),var(--navy-light));overflow:hidden}
+.cta-section::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(0,212,170,0.06) 0%,transparent 65%)}
+.cta-content{position:relative;z-index:2}
+.cta-content h2{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:1rem;font-weight:400}
+.cta-content>p{color:var(--gray-muted);font-size:1.02rem;margin-bottom:2.2rem;font-weight:300}
 .cta-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.cta-contact{display:flex;gap:2.5rem;justify-content:center;margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.06)}
-.cta-contact-item{text-align:center}.cta-contact-item .label{font-size:.72rem;color:var(--teal);font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.3rem}
-.cta-contact-item a{color:#fff;text-decoration:none;font-size:.95rem;font-weight:500}.cta-contact-item a:hover{color:var(--teal)}
-footer{padding:2.5rem 0;border-top:1px solid rgba(255,255,255,0.04);text-align:center;position:relative;z-index:2}
-footer p{font-size:.78rem;color:var(--gray-muted)}footer .footer-logo{height:28px;margin-bottom:.8rem;opacity:.5}
-.hero-brand{display:flex;align-items:center;gap:1.2rem;margin-bottom:2.5rem}
-.hero-brand img{height:72px;filter:drop-shadow(0 0 30px rgba(0,191,166,0.15))}
-.hero-brand-text{display:flex;flex-direction:column;gap:.15rem}
-.hero-brand-name{font-family:var(--serif);font-size:2.2rem;color:#fff;letter-spacing:.02em;line-height:1.1}
-.hero-brand-tagline{font-size:.78rem;color:var(--teal);font-weight:600;letter-spacing:.12em;text-transform:uppercase}
-.hero-brand-divider{width:1px;height:48px;background:linear-gradient(180deg,transparent,rgba(0,191,166,0.4),transparent)}
-@media(max-width:900px){.hero-brand img{height:56px}.hero-brand-name{font-size:1.6rem}.hero-brand{gap:.8rem}.hero-brand-divider{height:36px}}
-@media(max-width:600px){.hero-brand{flex-direction:column;align-items:flex-start;gap:.6rem}.hero-brand-divider{display:none}.hero-brand-name{font-size:1.4rem}.hero-actions{flex-direction:column;width:100%}.hero-actions a{text-align:center;width:100%}.container{padding:0 1.2rem}.cta-actions{flex-direction:column;width:80%}.cta-actions a{text-align:center}}
-.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
-.reveal-delay-1{transition-delay:.1s}.reveal-delay-2{transition-delay:.2s}.reveal-delay-3{transition-delay:.3s}
-@media(max-width:900px){.values-grid,.prod-grid,.scanner-grid,.team-grid,.platform-features{grid-template-columns:1fr}.hero-stats{flex-direction:column;gap:1.5rem}.nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,22,40,0.98);flex-direction:column;justify-content:center;align-items:center;gap:2rem;z-index:99}.nav-links.open{display:flex}.mobile-toggle{display:block;z-index:101}.cta-contact{flex-direction:column;gap:1.5rem}}
+.cta-contact{display:flex;gap:3rem;justify-content:center;margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.05)}
+.cta-contact-item{text-align:center}
+.cta-contact-item .label{font-size:.7rem;color:var(--accent);font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.35rem}
+.cta-contact-item a{color:#fff;text-decoration:none;font-size:.92rem;font-weight:500;transition:color .3s}.cta-contact-item a:hover{color:var(--accent)}
+
+/* Footer */
+footer{padding:2.8rem 0;border-top:1px solid rgba(255,255,255,0.03);text-align:center;position:relative;z-index:2}
+footer p{font-size:.76rem;color:var(--gray-muted);letter-spacing:.02em}
+footer .footer-logo{height:28px;margin-bottom:.8rem;opacity:.4;transition:opacity .3s}footer .footer-logo:hover{opacity:.6}
+
+/* Testimonial / Trust Section */
+.trust-section{background:var(--navy);padding:5rem 0;text-align:center;position:relative;z-index:2}
+.trust-badges{display:flex;justify-content:center;gap:4rem;align-items:center;flex-wrap:wrap;margin-top:2rem}
+.trust-badge{display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:.5;transition:opacity .3s}
+.trust-badge:hover{opacity:.8}
+.trust-badge-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);color:var(--accent)}
+.trust-badge span{font-size:.72rem;color:var(--gray-muted);font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+
+/* Animations */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.12s}.reveal-delay-2{transition-delay:.24s}.reveal-delay-3{transition-delay:.36s}
+
+/* Responsive */
+@media(max-width:900px){
+  .hero-brand img{height:56px}.hero-brand-name{font-size:1.6rem}.hero-brand{gap:.8rem}.hero-brand-divider{height:36px}
+  .values-grid,.prod-grid,.scanner-grid,.team-grid,.platform-features{grid-template-columns:1fr}
+  .hero-stats{flex-direction:column;gap:1.5rem}
+  .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(8,14,26,0.98);flex-direction:column;justify-content:center;align-items:center;gap:2.2rem;z-index:99;backdrop-filter:blur(20px)}
+  .nav-links.open{display:flex}.mobile-toggle{display:block;z-index:101}
+  .cta-contact{flex-direction:column;gap:1.5rem}
+  .trust-badges{gap:2rem}
+}
+@media(max-width:600px){
+  .hero-brand{flex-direction:column;align-items:flex-start;gap:.6rem}.hero-brand-divider{display:none}.hero-brand-name{font-size:1.4rem}
+  .hero-actions{flex-direction:column;width:100%}.hero-actions a{text-align:center;width:100%}
+  .container{padding:0 1.2rem}
+  .cta-actions{flex-direction:column;width:80%;margin:0 auto}.cta-actions a{text-align:center}
+  section{padding:5rem 0}
+}
 </style>
 </head>
 <body>
 <div class="cursor-glow" id="cursorGlow"></div>
-<div class="scanline"></div>
 <div class="particles" id="particles"></div>
 
 <nav class="nav" id="navbar"><div class="container">
-  <a href="#"><img src="data:image/webp;base64,UklGRmQCAABXRUJQVlA4IFgCAAAwEACdASqWAJYAPm02mkkkIqKhIvcYWIANiWlu3V0S61LN4UB9A4uYxPne1A/1Z6pIbYuRLWMeWbAQY7Ku7uK6G8jL2VbtWqmWYJ3jgIMx+AzZLZsk4+c9xtBsX7YqV4sBP1h2eCJUgzE8Otnv6gTHlbjIux5a81cz+EI11IlrGXMXSRmm1XekXAAA/voh74NW5aH2hg0+C171kwgBtm6picJZP23fJvJBEQaegRZXLYop2po3SkDkxhw0hqwFxjf9YJ7UPCiXmeQ8nHuQ6t767X4eiuZER40LO4lBsYbfHZ1SX2hh9/0eGraZwo/HmJcyPHkHkIHbo0/SsylmlPVDEWXcq07EZYZKnP2v9FO3ZN3uVczTUN/yee//VSF2fDoKdex17AQhYjvkD1TzLhwimt4djK9YNkQ814CGrtaa60Q8GGE+6ceQYDO+1nf95/ObTNZgb80v3TBynpuouw+55KZUzowbRL1KUJE7F8fzsuBD+qDEZNzPSBDSD14csa4KPBnOJw72J/fgubP4QAZ319ti4IahFPvXx3EQ5pVvy6tpSn+aC53f3PJmDwY1eW8XgcWU0/q1MTU4DlSXj8dVYeh7a75IbIQcGAmHd0/K+rtFpxdo4EEg/0eKe0TvDXF1fOFQEOxSvuFXKf6Egy+49EM1hUcNVY99wqPmTlLQEGUFIoMKVJ1aGKt/xYB4iaMFWHxQsaKWZ0wzXu/vn+Q82wQjjRWgCaH/B36yAWoBhIBgPGptZRj+u4VGtkOlacsggrwujxKoCeZw2KwgVhm3PHUUVbRrEAA=" alt="PI Dental Lab" class="nav-logo"></a>
+  <a href="#" aria-label="Pi Dental Lab Home"><img src="data:image/webp;base64,UklGRmQCAABXRUJQVlA4IFgCAAAwEACdASqWAJYAPm02mkkkIqKhIvcYWIANiWlu3V0S61LN4UB9A4uYxPne1A/1Z6pIbYuRLWMeWbAQY7Ku7uK6G8jL2VbtWqmWYJ3jgIMx+AzZLZsk4+c9xtBsX7YqV4sBP1h2eCJUgzE8Otnv6gTHlbjIux5a81cz+EI11IlrGXMXSRmm1XekXAAA/voh74NW5aH2hg0+C171kwgBtm6picJZP23fJvJBEQaegRZXLYop2po3SkDkxhw0hqwFxjf9YJ7UPCiXmeQ8nHuQ6t767X4eiuZER40LO4lBsYbfHZ1SX2hh9/0eGraZwo/HmJcyPHkHkIHbo0/SsylmlPVDEWXcq07EZYZKnP2v9FO3ZN3uVczTUN/yee//VSF2fDoKdex17AQhYjvkD1TzLhwimt4djK9YNkQ814CGrtaa60Q8GGE+6ceQYDO+1nf95/ObTNZgb80v3TBynpuouw+55KZUzowbRL1KUJE7F8fzsuBD+qDEZNzPSBDSD14csa4KPBnOJw72J/fgubP4QAZ319ti4IahFPvXx3EQ5pVvy6tpSn+aC53f3PJmDwY1eW8XgcWU0/q1MTU4DlSXj8dVYeh7a75IbIQcGAmHd0/K+rtFpxdo4EEg/0eKe0TvDXF1fOFQEOxSvuFXKf6Egy+49EM1hUcNVY99wqPmTlLQEGUFIoMKVJ1aGKt/xYB4iaMFWHxQsaKWZ0wzXu/vn+Q82wQjjRWgCaH/B36yAWoBhIBgPGptZRj+u4VGtkOlacsggrwujxKoCeZw2KwgVhm3PHUUVbRrEAA=" alt="PI Dental Lab" class="nav-logo"></a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#services">Services</a></li>
     <li><a href="#production">Production</a></li>
@@ -141,15 +263,15 @@ footer p{font-size:.78rem;color:var(--gray-muted)}footer .footer-logo{height:28p
     <li><a href="#team">Team</a></li>
     <li><a href="#contact" class="nav-cta">GET STARTED</a></li>
   </ul>
-  <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></button>
+  <button class="mobile-toggle" aria-label="Toggle menu" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></button>
 </div></nav>
 
-<section class="hero"><div class="container"><div class="hero-content">
+<section class="hero"><div class="hero-grid"></div><div class="container"><div class="hero-content">
   <div class="hero-brand">
-    <img src="data:image/webp;base64,UklGRmQCAABXRUJQVlA4IFgCAAAwEACdASqWAJYAPm02mkkkIqKhIvcYWIANiWlu3V0S61LN4UB9A4uYxPne1A/1Z6pIbYuRLWMeWbAQY7Ku7uK6G8jL2VbtWqmWYJ3jgIMx+AzZLZsk4+c9xtBsX7YqV4sBP1h2eCJUgzE8Otnv6gTHlbjIux5a81cz+EI11IlrGXMXSRmm1XekXAAA/voh74NW5aH2hg0+C171kwgBtm6picJZP23fJvJBEQaegRZXLYop2po3SkDkxhw0hqwFxjf9YJ7UPCiXmeQ8nHuQ6t767X4eiuZER40LO4lBsYbfHZ1SX2hh9/0eGraZwo/HmJcyPHkHkIHbo0/SsylmlPVDEWXcq07EZYZKnP2v9FO3ZN3uVczTUN/yee//VSF2fDoKdex17AQhYjvkD1TzLhwimt4djK9YNkQ814CGrtaa60Q8GGE+6ceQYDO+1nf95/ObTNZgb80v3TBynpuouw+55KZUzowbRL1KUJE7F8fzsuBD+qDEZNzPSBDSD14csa4KPBnOJw72J/fgubP4QAZ319ti4IahFPvXx3EQ5pVvy6tpSn+aC53f3PJmDwY1eW8XgcWU0/q1MTU4DlSXj8dVYeh7a75IbIQcGAmHd0/K+rtFpxdo4EEg/0eKe0TvDXF1fOFQEOxSvuFXKf6Egy+49EM1hUcNVY99wqPmTlLQEGUFIoMKVJ1aGKt/xYB4iaMFWHxQsaKWZ0wzXu/vn+Q82wQjjRWgCaH/B36yAWoBhIBgPGptZRj+u4VGtkOlacsggrwujxKoCeZw2KwgVhm3PHUUVbRrEAA=" alt="PI Dental Lab Logo">
+    <img src="data:image/webp;base64,UklGRmQCAABXRUJQVlA4IFgCAAAwEACdASqWAJYAPm02mkkkIqKhIvcYWIANiWlu3V0S61LN4UB9A4uYxPne1A/1Z6pIbYuRLWMeWbAQY7Ku7uK6G8jL2VbtWqmWYJ3jgIMx+AzZLZsk4+c9xtBsX7YqV4sBP1h2eCJUgzE8Otnv6gTHlbjIux5a81cz+EI11IlrGXMXSRmm1XekXAAA/voh74NW5aH2hg0+C171kwgBtm6picJZP23fJvJBEQaegRZXLYop2po3SkDkxhw0hqwFxjf9YJ7UPCiXmeQ8nHuQ6t767X4eiuZER40LO4lBsYbfHZ1SX2hh9/0eGraZwo/HmJcyPHkHkIHbo0/SsylmlPVDEWXcq07EZYZKnP2v9FO3ZN3uVczTUN/yee//VSF2fDoKdex17AQhYjvkD1TzLhwimt4djK9YNkQ814CGrtaa60Q8GGE+6ceQYDO+1nf95/ObTNZgb80v3TBynpuouw+55KZUzowbRL1KUJE7F8fzsuBD+qDEZNzPSBDSD14csa4KPBnOJw72J/fgubP4QAZ319ti4IahFPvXx3EQ5pVvy6tpSn+aC53f3PJmDwY1eW8XgcWU0/q1MTU4DlSXj8dVYeh7a75IbIQcGAmHd0/K+rtFpxdo4EEg/0eKe0TvDXF1fOFQEOxSvuFXKf6Egy+49EM1hUcNVY99wqPmTlLQEGUFIoMKVJ1aGKt/xYB4iaMFWHxQsaKWZ0wzXu/vn+Q82wQjjRWgCaH/B36yAWoBhIBgPGptZRj+u4VGtkOlacsggrwujxKoCeZw2KwgVhm3PHUUVbRrEAA=" alt="Pi Dental Lab Logo" width="150" height="150">
     <div class="hero-brand-divider"></div>
     <div class="hero-brand-text">
-      <span class="hero-brand-name">PI Dental Lab</span>
+      <span class="hero-brand-name">Pi Dental Lab</span>
       <span class="hero-brand-tagline">Precision · Innovation</span>
     </div>
   </div>
@@ -162,15 +284,15 @@ footer p{font-size:.78rem;color:var(--gray-muted)}footer .footer-logo{height:28p
   </div>
   <div class="hero-stats">
     <div class="stat-item"><div class="stat-num">2</div><div class="stat-label">Production Lines</div></div>
-    <div class="stat-item"><div class="stat-num">30<span style="font-family:var(--sans);font-size:1rem;color:var(--teal)">+</span></div><div class="stat-label">Years Combined Experience</div></div>
+    <div class="stat-item"><div class="stat-num">30<span style="font-family:var(--sans);font-size:1rem;color:var(--accent)">+</span></div><div class="stat-label">Years Combined Experience</div></div>
     <div class="stat-item"><div class="stat-num">$0</div><div class="stat-label">Scanner Lease Available</div></div>
   </div>
 </div></div></section>
 
 <section id="services"><div class="container">
-  <div class="section-label reveal">Why PI</div>
+  <div class="section-label reveal">Why Pi</div>
   <h2 class="section-title reveal">Consistency without compromise</h2>
-  <p class="section-desc reveal">Every practice is different. PI was built to support the decisions you actually make — not force you into a one-size-fits-all workflow.</p>
+  <p class="section-desc reveal">Every practice is different. Pi was built to support the decisions you actually make — not force you into a one-size-fits-all workflow.</p>
   <div class="values-grid">
     <div class="value-card reveal reveal-delay-1">
       <div class="value-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M21 3l-7 7"/><path d="M3 3l7 7"/><path d="M3 21l7-7"/><path d="M21 21l-7-7"/><path d="M16 21h5v-5"/><path d="M8 21H3v-5"/></svg></div>
@@ -243,10 +365,10 @@ footer p{font-size:.78rem;color:var(--gray-muted)}footer .footer-logo{height:28p
   <h2 class="section-title reveal">Experience you can trust</h2>
   <div class="team-grid">
     <div class="team-card reveal">
-      <div class="team-avatar" style="background:linear-gradient(135deg,var(--teal),#00917D)">YK</div>
+      <div class="team-avatar" style="background:linear-gradient(135deg,var(--accent),#00917D)">YK</div>
       <h3>Yong Kim</h3><div class="team-role">Founder &amp; President</div>
       <p>Started in a dental lab at sixteen. Built and operated businesses across implants, dental supply, and insurance billing. Partnered in multiple dental practices — each with different teams, patient bases, and realities.</p>
-      <blockquote>"No two practices — or cases — are the same. PI was built for real-world dentistry."</blockquote>
+      <blockquote>"No two practices — or cases — are the same. Pi was built for real-world dentistry."</blockquote>
     </div>
     <div class="team-card reveal reveal-delay-1">
       <div class="team-avatar" style="background:linear-gradient(135deg,var(--navy-mid),var(--gray))">DK</div>
@@ -268,35 +390,122 @@ footer p{font-size:.78rem;color:var(--gray-muted)}footer .footer-logo{height:28p
   </div>
 </div></section>
 
+<!-- Trust Badges -->
+<div class="trust-section">
+  <div class="container">
+    <div class="trust-badges reveal">
+      <div class="trust-badge">
+        <div class="trust-badge-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <span>Quality Assured</span>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <span>Fast Turnaround</span>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <span>Case Guaranteed</span>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <span>Digital Workflow</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 <section id="contact" class="cta-section"><div class="cta-content container">
   <h2>Ready to get started?</h2>
   <p>Trial cases · Price list · Oral scanner demo</p>
   <div class="cta-actions">
-    <a href="mailto:info@pi-dentallab.com" class="btn-primary">Request Trial Case →</a>
+    <a href="mailto:support@pi-dentallab.com" class="btn-primary">Request Trial Case →</a>
     <a href="tel:415-216-7230" class="btn-secondary">Call or Text</a>
   </div>
   <div class="cta-contact">
-    <div class="cta-contact-item"><div class="label">Email</div><a href="mailto:info@pi-dentallab.com">info@pi-dentallab.com</a></div>
+    <div class="cta-contact-item"><div class="label">Email</div><a href="mailto:support@pi-dentallab.com">support@pi-dentallab.com</a></div>
     <div class="cta-contact-item"><div class="label">Call or Text</div><a href="tel:415-216-7230">415-216-7230</a></div>
     <div class="cta-contact-item"><div class="label">Web</div><a href="https://www.pi-dentallab.com">www.pi-dentallab.com</a></div>
   </div>
 </div></section>
 
 <footer><div class="container">
-  <img src="data:image/webp;base64,UklGRmQCAABXRUJQVlA4IFgCAAAwEACdASqWAJYAPm02mkkkIqKhIvcYWIANiWlu3V0S61LN4UB9A4uYxPne1A/1Z6pIbYuRLWMeWbAQY7Ku7uK6G8jL2VbtWqmWYJ3jgIMx+AzZLZsk4+c9xtBsX7YqV4sBP1h2eCJUgzE8Otnv6gTHlbjIux5a81cz+EI11IlrGXMXSRmm1XekXAAA/voh74NW5aH2hg0+C171kwgBtm6picJZP23fJvJBEQaegRZXLYop2po3SkDkxhw0hqwFxjf9YJ7UPCiXmeQ8nHuQ6t767X4eiuZER40LO4lBsYbfHZ1SX2hh9/0eGraZwo/HmJcyPHkHkIHbo0/SsylmlPVDEWXcq07EZYZKnP2v9FO3ZN3uVczTUN/yee//VSF2fDoKdex17AQhYjvkD1TzLhwimt4djK9YNkQ814CGrtaa60Q8GGE+6ceQYDO+1nf95/ObTNZgb80v3TBynpuouw+55KZUzowbRL1KUJE7F8fzsuBD+qDEZNzPSBDSD14csa4KPBnOJw72J/fgubP4QAZ319ti4IahFPvXx3EQ5pVvy6tpSn+aC53f3PJmDwY1eW8XgcWU0/q1MTU4DlSXj8dVYeh7a75IbIQcGAmHd0/K+rtFpxdo4EEg/0eKe0TvDXF1fOFQEOxSvuFXKf6Egy+49EM1hUcNVY99wqPmTlLQEGUFIoMKVJ1aGKt/xYB4iaMFWHxQsaKWZ0wzXu/vn+Q82wQjjRWgCaH/B36yAWoBhIBgPGptZRj+u4VGtkOlacsggrwujxKoCeZw2KwgVhm3PHUUVbRrEAA=" alt="PI" class="footer-logo">
-  <p>© 2026 PI Dental Lab. Dental Lab Serving Real-World Dentistry.</p>
+  <img src="data:image/webp;base64,UklGRmQCAABXRUJQVlA4IFgCAAAwEACdASqWAJYAPm02mkkkIqKhIvcYWIANiWlu3V0S61LN4UB9A4uYxPne1A/1Z6pIbYuRLWMeWbAQY7Ku7uK6G8jL2VbtWqmWYJ3jgIMx+AzZLZsk4+c9xtBsX7YqV4sBP1h2eCJUgzE8Otnv6gTHlbjIux5a81cz+EI11IlrGXMXSRmm1XekXAAA/voh74NW5aH2hg0+C171kwgBtm6picJZP23fJvJBEQaegRZXLYop2po3SkDkxhw0hqwFxjf9YJ7UPCiXmeQ8nHuQ6t767X4eiuZER40LO4lBsYbfHZ1SX2hh9/0eGraZwo/HmJcyPHkHkIHbo0/SsylmlPVDEWXcq07EZYZKnP2v9FO3ZN3uVczTUN/yee//VSF2fDoKdex17AQhYjvkD1TzLhwimt4djK9YNkQ814CGrtaa60Q8GGE+6ceQYDO+1nf95/ObTNZgb80v3TBynpuouw+55KZUzowbRL1KUJE7F8fzsuBD+qDEZNzPSBDSD14csa4KPBnOJw72J/fgubP4QAZ319ti4IahFPvXx3EQ5pVvy6tpSn+aC53f3PJmDwY1eW8XgcWU0/q1MTU4DlSXj8dVYeh7a75IbIQcGAmHd0/K+rtFpxdo4EEg/0eKe0TvDXF1fOFQEOxSvuFXKf6Egy+49EM1hUcNVY99wqPmTlLQEGUFIoMKVJ1aGKt/xYB4iaMFWHxQsaKWZ0wzXu/vn+Q82wQjjRWgCaH/B36yAWoBhIBgPGptZRj+u4VGtkOlacsggrwujxKoCeZw2KwgVhm3PHUUVbRrEAA=" alt="Pi Dental Lab" class="footer-logo">
+  <p>&copy; 2026 Pi Dental Lab. Premium Dental Laboratory Serving Southern California.</p>
 </div></footer>
 
 <script>
-const nav=document.getElementById('navbar');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
-document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const el=document.querySelector(a.getAttribute('href'));if(el){el.scrollIntoView({behavior:'smooth',block:'start'});document.getElementById('navLinks').classList.remove('open')}})});
+// Navigation scroll effect
+const nav=document.getElementById('navbar');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const el=document.querySelector(a.getAttribute('href'));
+    if(el){el.scrollIntoView({behavior:'smooth',block:'start'});document.getElementById('navLinks').classList.remove('open')}
+  });
+});
+
+// Reveal on scroll
 const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('visible')})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-const glow=document.getElementById('cursorGlow');document.addEventListener('mousemove',e=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'});
-document.querySelectorAll('.btn-primary').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.setProperty('--mouse-x',((e.clientX-r.left)/r.width)*100+'%');b.style.setProperty('--mouse-y',((e.clientY-r.top)/r.height)*100+'%')})});
-document.querySelectorAll('.value-card,.prod-card,.scanner-card').forEach(c=>{c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`translateY(-4px) perspective(800px) rotateY(${x*6}deg) rotateX(${-y*6}deg)`});c.addEventListener('mouseleave',()=>{c.style.transform='translateY(0)'})});
-const pEl=document.getElementById('particles');for(let i=0;i<30;i++){const p=document.createElement('div');p.className='particle';p.style.left=Math.random()*100+'%';p.style.width=p.style.height=(Math.random()*2+1)+'px';p.style.animationDuration=(Math.random()*15+10)+'s';p.style.animationDelay=(Math.random()*15)+'s';pEl.appendChild(p)}
-document.querySelectorAll('.stat-num').forEach(el=>{const t=el.textContent.trim(),m=t.match(/^(\$?)(\d+)(.*)$/);if(!m)return;const[,pre,num,suf]=m,tgt=parseInt(num);const io=new IntersectionObserver(entries=>{entries.forEach(en=>{if(en.isIntersecting){let cur=0;const step=Math.max(1,Math.floor(tgt/30));const iv=setInterval(()=>{cur+=step;if(cur>=tgt){cur=tgt;clearInterval(iv)}el.innerHTML=pre+cur+suf},40);io.unobserve(el)}})},{threshold:0.5});io.observe(el)});
+
+// Cursor glow
+const glow=document.getElementById('cursorGlow');
+document.addEventListener('mousemove',e=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'});
+
+// Button mouse tracking
+document.querySelectorAll('.btn-primary').forEach(b=>{
+  b.addEventListener('mousemove',e=>{
+    const r=b.getBoundingClientRect();
+    b.style.setProperty('--mouse-x',((e.clientX-r.left)/r.width)*100+'%');
+    b.style.setProperty('--mouse-y',((e.clientY-r.top)/r.height)*100+'%');
+  });
+});
+
+// Card 3D tilt
+document.querySelectorAll('.value-card,.prod-card,.scanner-card').forEach(c=>{
+  c.addEventListener('mousemove',e=>{
+    const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    c.style.transform=`translateY(-6px) perspective(800px) rotateY(${x*5}deg) rotateX(${-y*5}deg)`;
+  });
+  c.addEventListener('mouseleave',()=>{c.style.transform='translateY(0)'});
+});
+
+// Particles
+const pEl=document.getElementById('particles');
+for(let i=0;i<25;i++){
+  const p=document.createElement('div');p.className='particle';
+  p.style.left=Math.random()*100+'%';
+  p.style.width=p.style.height=(Math.random()*1.5+1)+'px';
+  p.style.animationDuration=(Math.random()*18+12)+'s';
+  p.style.animationDelay=(Math.random()*18)+'s';
+  pEl.appendChild(p);
+}
+
+// Stat counter animation
+document.querySelectorAll('.stat-num').forEach(el=>{
+  const t=el.textContent.trim(),m=t.match(/^(\$?)(\d+)(.*)$/);
+  if(!m)return;
+  const[,pre,num,suf]=m,tgt=parseInt(num);
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        let start=0;const dur=1200,startTime=performance.now();
+        function animate(now){
+          const p=Math.min((now-startTime)/dur,1);
+          const eased=1-Math.pow(1-p,3);
+          el.textContent=pre+Math.floor(eased*tgt)+suf;
+          if(p<1)requestAnimationFrame(animate);
+        }
+        requestAnimationFrame(animate);
+        io.unobserve(el);
+      }
+    });
+  },{threshold:0.5});
+  io.observe(el);
+});
 </script>
 </body>
 </html>
