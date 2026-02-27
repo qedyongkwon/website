@@ -302,6 +302,12 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;b
   transition:opacity 1.2s ease;
 }
 #video-intro.fade-out{opacity:0;pointer-events:none}
+/* ===== SCATTER CANVAS ===== */
+#scatter-canvas{
+  position:fixed;inset:0;z-index:10000;
+  pointer-events:none;
+  display:none;
+}
 #video-intro video{
   width:50%;max-width:700px;
   height:auto;
@@ -352,44 +358,124 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;b
 </style>
 
 <div id="video-intro">
-  <video id="intro-video" autoplay muted playsinline>
+  <video id="intro-video" autoplay muted playsinline crossorigin="anonymous">
     <source src="grok.mp4" type="video/mp4">
   </video>
   <button id="skip-btn">Skip ›</button>
 </div>
+<canvas id="scatter-canvas"></canvas>
 
 <script>
 (function(){
   var intro=document.getElementById('video-intro');
   var video=document.getElementById('intro-video');
   var skip=document.getElementById('skip-btn');
+  var canvas=document.getElementById('scatter-canvas');
+  var ctx=canvas.getContext('2d');
   var done=false;
+  var particles=[];
+  var animId=null;
 
   document.body.style.overflow='hidden';
 
+  function startScatter(){
+    // 캔버스 크기 = 화면 크기
+    canvas.width=window.innerWidth;
+    canvas.height=window.innerHeight;
+    canvas.style.display='block';
+
+    // 영상 현재 프레임을 캔버스에 그리기
+    var vw=video.videoWidth, vh=video.videoHeight;
+    var scale=Math.min(canvas.width*0.5/vw, canvas.height*0.85/vh);
+    var dw=vw*scale, dh=vh*scale;
+    var dx=(canvas.width-dw)/2, dy=(canvas.height-dh)/2;
+
+    var tmp=document.createElement('canvas');
+    tmp.width=dw; tmp.height=dh;
+    tmp.getContext('2d').drawImage(video,0,0,dw,dh);
+
+    // 파티클 생성 (격자 샘플링)
+    var step=6;
+    var tmpCtx=tmp.getContext('2d');
+    var imgData=tmpCtx.getImageData(0,0,dw,dh);
+    particles=[];
+    for(var y=0;y<dh;y+=step){
+      for(var x=0;x<dw;x+=step){
+        var i=(y*dw+x)*4;
+        var a=imgData.data[i+3];
+        if(a<30)continue;
+        var r=imgData.data[i],g=imgData.data[i+1],b=imgData.data[i+2];
+        particles.push({
+          x:dx+x, y:dy+y,
+          ox:dx+x, oy:dy+y,
+          vx:(Math.random()-0.5)*18,
+          vy:(Math.random()-0.5)*18,
+          alpha:1,
+          size:step*0.8,
+          color:'rgba('+r+','+g+','+b+',1)'
+        });
+      }
+    }
+
+    // 영상/오버레이 숨기기
+    intro.style.display='none';
+
+    // 히어로 페이드인 시작
+    var main=document.getElementById('main-content');
+    setTimeout(function(){ if(main) main.style.opacity='1'; },300);
+
+    // 파티클 애니메이션
+    var startTime=null;
+    var duration=900;
+    function animate(ts){
+      if(!startTime)startTime=ts;
+      var elapsed=ts-startTime;
+      var progress=Math.min(elapsed/duration,1);
+
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      var allDead=true;
+      for(var p=0;p<particles.length;p++){
+        var pt=particles[p];
+        pt.x+=pt.vx;
+        pt.y+=pt.vy;
+        pt.vy+=0.4; // 중력
+        pt.alpha=1-progress;
+        if(pt.alpha>0){
+          allDead=false;
+          ctx.globalAlpha=pt.alpha;
+          ctx.fillStyle=pt.color;
+          ctx.fillRect(pt.x,pt.y,pt.size,pt.size);
+        }
+      }
+      ctx.globalAlpha=1;
+      if(!allDead && progress<1){
+        animId=requestAnimationFrame(animate);
+      } else {
+        canvas.style.display='none';
+        document.body.style.overflow='';
+      }
+    }
+    animId=requestAnimationFrame(animate);
+  }
+
   function endIntro(){
     if(done)return;done=true;
-    intro.classList.add('fade-out');
-    document.body.style.overflow='';
-    var main=document.getElementById('main-content');
-    setTimeout(function(){ if(main) main.style.opacity='1'; }, 1000);
-    setTimeout(function(){ intro.style.display='none'; }, 1400);
+    try{
+      startScatter();
+    }catch(e){
+      // fallback: scatter 실패 시 기본 fade
+      intro.classList.add('fade-out');
+      document.body.style.overflow='';
+      var main=document.getElementById('main-content');
+      setTimeout(function(){ if(main) main.style.opacity='1'; },800);
+      setTimeout(function(){ intro.style.display='none'; },1400);
+    }
+    setTimeout(function(){ if(canvas) canvas.style.display='none'; }, 2000);
   }
 
   video.addEventListener('ended', endIntro);
   skip.addEventListener('click', endIntro);
   setTimeout(endIntro, 15000);
-
-  // ===== 비디오 줌인 효과 =====
-  // 영상 끝나기 0.8초 전부터 서서히 줌인
-  video.addEventListener('timeupdate', function(){
-    var remaining = video.duration - video.currentTime;
-    if(remaining <= 0.8 && remaining > 0){
-      var scale = 1 + (0.8 - remaining) * 0.3; // 최대 1.24배
-      video.style.transform = 'scale(' + scale + ')';
-      video.style.transition = 'transform 0.1s linear';
-    }
-  });
 })();
 
 // ===== 치아 파우더 파티클 =====
