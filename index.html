@@ -320,11 +320,40 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;b
   z-index:10000;
 }
 #skip-btn:hover{background:rgba(255,255,255,.3)}
+
+/* ===== DENTAL POWDER PARTICLES ===== */
+#dental-particles{
+  position:absolute;inset:0;pointer-events:none;z-index:2;overflow:hidden;
+}
+.dp{
+  position:absolute;
+  border-radius:50%;
+  background:rgba(255,255,255,.45);
+  animation:dpFloat linear infinite;
+}
+@keyframes dpFloat{
+  0%{transform:translateY(0) rotate(0deg);opacity:0}
+  10%{opacity:1}
+  90%{opacity:.3}
+  100%{transform:translateY(-100vh) rotate(720deg);opacity:0}
+}
+
+/* ===== WORD-BY-WORD HERO TEXT ===== */
+.hero-word{
+  display:inline-block;
+  opacity:0;
+  transform:translateY(20px);
+  transition:opacity .5s ease, transform .5s ease;
+}
+.hero-word.revealed{
+  opacity:1;
+  transform:translateY(0);
+}
 </style>
 
 <div id="video-intro">
   <video id="intro-video" autoplay muted playsinline>
-    <source src="grok.mp4" type="video/mp4">
+    <source src="grok-video-58eddc69-e002-4adb-b208-18b12a2cc864__1_.mp4" type="video/mp4">
   </video>
   <button id="skip-btn">Skip ›</button>
 </div>
@@ -350,6 +379,76 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;b
   video.addEventListener('ended', endIntro);
   skip.addEventListener('click', endIntro);
   setTimeout(endIntro, 15000);
+
+  // ===== 비디오 줌인 효과 =====
+  // 영상 끝나기 0.8초 전부터 서서히 줌인
+  video.addEventListener('timeupdate', function(){
+    var remaining = video.duration - video.currentTime;
+    if(remaining <= 0.8 && remaining > 0){
+      var scale = 1 + (0.8 - remaining) * 0.3; // 최대 1.24배
+      video.style.transform = 'scale(' + scale + ')';
+      video.style.transition = 'transform 0.1s linear';
+    }
+  });
+})();
+
+// ===== 치아 파우더 파티클 =====
+(function(){
+  var container = document.getElementById('dental-particles');
+  if(!container) return;
+  for(var i = 0; i < 35; i++){
+    var p = document.createElement('div');
+    p.className = 'dp';
+    var size = Math.random() * 3 + 1;
+    p.style.cssText = [
+      'width:' + size + 'px',
+      'height:' + size + 'px',
+      'left:' + Math.random() * 100 + '%',
+      'bottom:' + (Math.random() * 20 - 10) + '%',
+      'animation-duration:' + (Math.random() * 12 + 8) + 's',
+      'animation-delay:' + (Math.random() * 8) + 's',
+      'opacity:0'
+    ].join(';');
+    container.appendChild(p);
+  }
+})();
+
+// ===== 단어별 히어로 텍스트 애니메이션 =====
+(function(){
+  function wrapWords(selector){
+    var els = document.querySelectorAll(selector);
+    els.forEach(function(el){
+      if(el.classList.contains('tw-line')) return; // typewriter는 건드리지 않음
+      var words = el.innerHTML.split(/(\s+)/);
+      el.innerHTML = words.map(function(w){
+        if(w.trim() === '') return w;
+        return '<span class="hero-word">' + w + '</span>';
+      }).join('');
+    });
+  }
+
+  function revealWords(delay){
+    var words = document.querySelectorAll('#page-en .hero-word');
+    words.forEach(function(w, i){
+      setTimeout(function(){
+        w.classList.add('revealed');
+      }, delay + i * 80);
+    });
+  }
+
+  // main-content 페이드인 시점에 맞춰 단어 애니메이션 시작
+  var mc = document.getElementById('main-content');
+  if(mc){
+    var observer = new MutationObserver(function(){
+      if(mc.style.opacity === '1'){
+        wrapWords('.hero-desc');
+        wrapWords('.hero-overline');
+        revealWords(400);
+        observer.disconnect();
+      }
+    });
+    observer.observe(mc, {attributes: true, attributeFilter: ['style']});
+  }
 })();
 </script>
 
@@ -379,6 +478,7 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;b
 </div></nav>
 
 <div id="page-en" class="active"><section class="hero">
+<div id="dental-particles"></div>
 <div class="hero-bg">
 <div class="hero-grid-bg"></div>
 <div class="hero-orb orb-1"></div>
