@@ -384,11 +384,10 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;b
     canvas.height=window.innerHeight;
     canvas.style.display='block';
 
-    // 영상 현재 프레임을 캔버스에 그리기
-    var vw=video.videoWidth, vh=video.videoHeight;
-    var scale=Math.min(canvas.width*0.5/vw, canvas.height*0.85/vh);
-    var dw=vw*scale, dh=vh*scale;
-    var dx=(canvas.width-dw)/2, dy=(canvas.height-dh)/2;
+    // 영상이 실제로 화면에 렌더링되는 위치/크기 계산
+    var rect=video.getBoundingClientRect();
+    var dx=rect.left, dy=rect.top;
+    var dw=rect.width, dh=rect.height;
 
     var tmp=document.createElement('canvas');
     tmp.width=dw; tmp.height=dh;
