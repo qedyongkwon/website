@@ -291,6 +291,68 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;b
 </style>
 </head>
 <body>
+
+<!-- ===== VIDEO INTRO OVERLAY ===== -->
+<style>
+#video-intro{
+  position:fixed;inset:0;z-index:9999;
+  background:#000;
+  display:flex;align-items:center;justify-content:center;
+  transition:opacity 1.2s ease;
+}
+#video-intro.fade-out{opacity:0;pointer-events:none}
+#video-intro video{
+  width:100%;height:100%;object-fit:cover;
+  display:block;
+}
+#skip-btn{
+  position:absolute;bottom:2.5rem;right:2.5rem;
+  background:rgba(255,255,255,.15);
+  color:#fff;border:1px solid rgba(255,255,255,.3);
+  font-family:var(--sans);font-size:.9rem;font-weight:600;
+  padding:.6rem 1.4rem;border-radius:8px;cursor:pointer;
+  backdrop-filter:blur(10px);
+  transition:all .3s;
+  z-index:10000;
+}
+#skip-btn:hover{background:rgba(255,255,255,.3)}
+</style>
+
+<div id="video-intro">
+  <video id="intro-video" autoplay muted playsinline>
+    <source src="grok-video-58eddc69-e002-4adb-b208-18b12a2cc864__1_.mp4" type="video/mp4">
+  </video>
+  <button id="skip-btn">Skip ›</button>
+</div>
+
+<script>
+(function(){
+  var intro=document.getElementById('video-intro');
+  var video=document.getElementById('intro-video');
+  var skip=document.getElementById('skip-btn');
+  var done=false;
+
+  function endIntro(){
+    if(done)return;done=true;
+    intro.classList.add('fade-out');
+    document.body.style.overflow='';
+    setTimeout(function(){intro.style.display='none'},1300);
+  }
+
+  // 페이지 로드 시 스크롤 막기
+  document.body.style.overflow='hidden';
+
+  // 비디오 끝나면 자동 전환
+  video.addEventListener('ended',endIntro);
+
+  // 혹시 비디오 로드 실패 시 5초 후 자동 스킵
+  setTimeout(endIntro, 15000);
+
+  // 스킵 버튼
+  skip.addEventListener('click', endIntro);
+})();
+</script>
+
 <div class="cursor-glow" id="cg"></div>
 <div class="particles" id="pt"></div>
 
