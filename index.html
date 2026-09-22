@@ -233,6 +233,159 @@
     .final-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
     .fine{font-size:9px!important;text-transform:uppercase;letter-spacing:.08em;color:#626a74!important;margin-top:17px!important}
 
+
+    /* INTERACTIVE DOCTOR PROFILE */
+    .profile-demo-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
+    .profile-demo-note{margin-top:12px!important;font-size:10px!important;color:#6f7681!important;text-transform:uppercase;letter-spacing:.08em;font-weight:800}
+    .pref-console{cursor:pointer;transition:transform .25s ease,box-shadow .25s ease}
+    .pref-console:hover{transform:rotate(0deg) translateY(-5px);box-shadow:0 34px 90px rgba(0,0,0,.42)}
+    .console-try{margin-top:12px;display:flex;justify-content:space-between;align-items:center;border:1px dashed rgba(11,13,18,.18);border-radius:15px;padding:13px 14px;font-size:10px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;color:#60656f;background:rgba(255,255,255,.5)}
+    .console-try b{width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:#0b0d12;color:#fff;font-size:12px}
+
+    .profile-modal-bg{
+      position:fixed;inset:0;z-index:140;display:none;align-items:center;justify-content:center;
+      padding:18px;background:rgba(4,5,9,.82);backdrop-filter:blur(18px)
+    }
+    .profile-modal-bg.open{display:flex}
+    .profile-modal{
+      width:min(100%,820px);max-height:94vh;overflow:auto;border-radius:32px;
+      background:#f7f6f2;box-shadow:0 40px 120px rgba(0,0,0,.46);position:relative
+    }
+    .profile-modal-header{
+      position:sticky;top:0;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:16px;
+      padding:20px 22px 15px;background:rgba(247,246,242,.92);backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(11,13,18,.08)
+    }
+    .profile-brand{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:950;letter-spacing:.05em}
+    .profile-brand .mini-pi{width:28px;height:28px;border-radius:9px;background:#0b0d12;color:var(--mint);display:grid;place-items:center;font-family:Georgia,serif;font-size:16px}
+    .profile-close{width:38px;height:38px;border:1px solid var(--line);background:#fff;border-radius:12px;cursor:pointer;font-size:18px}
+    .profile-progress-shell{height:4px;background:#e4e2dd;overflow:hidden}
+    .profile-progress{height:100%;width:25%;background:linear-gradient(90deg,var(--violet),var(--mint-strong));transition:width .35s ease}
+    .profile-stage{padding:44px 44px 40px;min-height:560px;display:flex;flex-direction:column}
+    .profile-step{display:none;animation:profileIn .28s ease}
+    .profile-step.active{display:block}
+    @keyframes profileIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    .profile-overline{font-size:9px;font-weight:950;letter-spacing:.15em;text-transform:uppercase;color:#8b8f98;margin-bottom:17px}
+    .profile-question{font-size:clamp(34px,5vw,58px);line-height:.96;letter-spacing:-.055em;margin-bottom:14px;max-width:690px}
+    .profile-sub{font-size:15px;line-height:1.55;color:#70747d;max-width:610px;margin-bottom:28px}
+    .option-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .option-grid.three{grid-template-columns:repeat(3,1fr)}
+    .option-card{
+      position:relative;text-align:left;border:1px solid rgba(11,13,18,.11);background:#fff;border-radius:22px;
+      padding:20px;min-height:175px;cursor:pointer;transition:.2s ease;color:#0b0d12
+    }
+    .option-card:hover{transform:translateY(-3px);border-color:rgba(11,13,18,.28);box-shadow:0 16px 38px rgba(11,13,18,.08)}
+    .option-card.selected{background:#0b0d12;color:#fff;border-color:#0b0d12;box-shadow:0 18px 50px rgba(11,13,18,.18)}
+    .option-card.selected .option-desc{color:#a1a7b0}
+    .option-card.selected .option-chip{background:var(--mint);color:#0b0d12}
+    .option-icon{height:54px;margin-bottom:23px;display:flex;align-items:center}
+    .option-symbol{font-size:38px;letter-spacing:-.08em;font-weight:500}
+    .contact-visual{width:80px;height:42px;display:flex;align-items:center;justify-content:center;gap:3px}
+    .tooth-shape{width:30px;height:38px;border:2px solid currentColor;border-radius:10px 10px 14px 14px;opacity:.75}
+    .contact-dot{width:7px;height:7px;border-radius:50%;background:var(--violet);margin:0 -5px;z-index:2;box-shadow:0 0 0 4px rgba(159,156,255,.18)}
+    .contact-band{width:8px;height:28px;border-radius:7px;background:var(--violet);margin:0 -5px;z-index:2;opacity:.9}
+    .bite-visual{display:grid;grid-template-columns:repeat(4,10px);gap:7px}
+    .bite-visual i{width:10px;height:10px;border-radius:50%;background:var(--violet);display:block}
+    .bite-visual.light i:nth-child(n+4){opacity:.12}
+    .bite-visual.out i{opacity:.10}
+    .option-chip{position:absolute;right:15px;top:15px;font-size:8px;font-weight:950;letter-spacing:.09em;text-transform:uppercase;background:#f0efeb;padding:7px 8px;border-radius:999px}
+    .option-title{font-size:20px;font-weight:900;letter-spacing:-.03em;margin-bottom:6px}
+    .option-desc{font-size:11px;line-height:1.5;color:#777c85;max-width:250px}
+    .profile-nav{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:30px}
+    .profile-back{border:0;background:transparent;color:#858a93;font-size:11px;font-weight:850;cursor:pointer;padding:10px 0}
+    .profile-next{border:0;background:#0b0d12;color:#fff;border-radius:999px;min-height:48px;padding:0 20px;font-size:11px;font-weight:900;cursor:pointer;opacity:.35;pointer-events:none;transition:.2s}
+    .profile-next.ready{opacity:1;pointer-events:auto}
+    .profile-next:hover{transform:translateY(-2px)}
+    .question-counter{font-size:10px;color:#989ca4;font-weight:850}
+
+    .profile-save-screen{display:none;text-align:center;padding:15px 0 5px}
+    .profile-save-screen.active{display:block;animation:profileIn .35s ease}
+    .saved-orb{
+      width:90px;height:90px;border-radius:50%;margin:5px auto 24px;display:grid;place-items:center;
+      background:var(--mint);font-size:38px;box-shadow:0 0 0 12px rgba(186,255,220,.35)
+    }
+    .profile-save-screen h3{font-size:clamp(40px,5vw,62px);letter-spacing:-.055em;margin-bottom:10px}
+    .profile-save-screen .save-sub{font-size:15px;color:#737780;max-width:560px;margin:0 auto 26px}
+    .profile-summary{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;text-align:left;max-width:620px;margin:0 auto}
+    .summary-item{background:#fff;border:1px solid rgba(11,13,18,.09);border-radius:16px;padding:15px}
+    .summary-item small{display:block;font-size:8px;text-transform:uppercase;letter-spacing:.11em;color:#9599a1;font-weight:900;margin-bottom:6px}
+    .summary-item strong{font-size:14px}
+    .summary-item.priority{grid-column:1/-1;background:#dedcff}
+    .saved-message{display:inline-flex;align-items:center;gap:7px;padding:9px 12px;background:#e1f9ed;color:#176140;border-radius:999px;font-size:9px;font-weight:950;text-transform:uppercase;letter-spacing:.09em;margin-bottom:20px}
+    .save-actions{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:25px}
+    .save-note{margin:13px auto 0!important;font-size:9px!important;color:#969aa2!important;max-width:520px!important;text-transform:uppercase;letter-spacing:.06em;font-weight:800}
+    .profile-soft-note{background:#eceafc;border-radius:18px;padding:15px 17px;margin-top:18px;font-size:11px;color:#565b67;line-height:1.5}
+    .profile-soft-note strong{color:#151820}
+
+    @media(max-width:680px){
+      .profile-modal-bg{padding:8px;align-items:flex-end}
+      .profile-modal{border-radius:26px 26px 12px 12px;max-height:96vh}
+      .profile-stage{padding:31px 20px 24px;min-height:610px}
+      .profile-question{font-size:39px}
+      .option-grid,.option-grid.three{grid-template-columns:1fr}
+      .option-card{min-height:135px;padding:17px}
+      .option-icon{height:40px;margin-bottom:13px}
+      .profile-summary{grid-template-columns:1fr}
+      .summary-item.priority{grid-column:auto}
+    }
+
+
+    /* PROFILE V2 — richer choices */
+    .option-grid.four{grid-template-columns:repeat(2,1fr)}
+    .option-card.rich{min-height:230px}
+    .option-meta{display:grid;gap:6px;margin-top:14px}
+    .option-pro,.option-con{
+      display:flex;gap:7px;align-items:flex-start;font-size:10px;line-height:1.45
+    }
+    .option-pro b,.option-con b{
+      flex:none;font-size:8px;letter-spacing:.09em;text-transform:uppercase;border-radius:999px;
+      padding:4px 6px;margin-top:-1px
+    }
+    .option-pro b{background:#ddf8ea;color:#176140}
+    .option-con b{background:#f3eee7;color:#785a3d}
+    .option-card.selected .option-pro b{background:#24483b;color:#baffdc}
+    .option-card.selected .option-con b{background:#443b31;color:#ffd8af}
+    .option-card.selected .option-pro,
+    .option-card.selected .option-con{color:#c4c8ce}
+    .contact-combo{display:flex;align-items:center;gap:9px}
+    .contact-combo .mini-label{
+      font-size:9px;font-weight:950;letter-spacing:.08em;text-transform:uppercase;color:#92969e
+    }
+    .option-card.selected .contact-combo .mini-label{color:#8f96a0}
+    .implant-visual{display:flex;align-items:center;gap:4px;height:48px}
+    .implant-crown{
+      width:34px;height:38px;border:2px solid currentColor;border-radius:9px 9px 12px 12px;opacity:.8;
+      position:relative
+    }
+    .implant-crown:after{
+      content:"";position:absolute;left:50%;bottom:-11px;transform:translateX(-50%);
+      width:8px;height:12px;border:2px solid currentColor;border-top:0;border-radius:0 0 4px 4px
+    }
+    .implant-neighbor{width:27px;height:36px;border:2px solid currentColor;border-radius:9px 9px 12px 12px;opacity:.55}
+    .composite-box{
+      width:9px;height:23px;border-radius:4px;background:var(--violet);margin-left:-7px;margin-right:-6px;z-index:2
+    }
+    .anterior-visual{display:flex;align-items:flex-end;gap:4px;height:50px}
+    .ant-tooth{width:25px;height:45px;border:2px solid currentColor;border-radius:7px 7px 11px 11px;opacity:.72}
+    .ant-tooth.layered{
+      background:linear-gradient(180deg,rgba(186,255,220,.12),rgba(159,156,255,.30))
+    }
+    .ant-tooth.block{
+      background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02))
+    }
+    .bite-mark{
+      width:12px;height:12px;border-radius:50%;background:var(--violet);display:inline-block;
+      box-shadow:0 0 0 4px rgba(159,156,255,.12)
+    }
+    .bite-mark.faint{opacity:.25}
+    .bite-pair{display:flex;gap:14px;align-items:center}
+    .bite-heavy{display:flex;gap:7px}.bite-heavy .bite-mark{box-shadow:0 0 0 6px rgba(159,156,255,.16)}
+    .save-tagline{font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#777d87;margin-top:8px}
+    @media(max-width:680px){
+      .option-grid.four{grid-template-columns:1fr}
+      .option-card.rich{min-height:190px}
+    }
+
     /* MODAL */
     .modal-bg{position:fixed;inset:0;background:rgba(7,8,12,.72);backdrop-filter:blur(12px);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
     .modal-bg.open{display:flex}
@@ -361,18 +514,23 @@
             <h2>Your lab should <span style="color:var(--mint)">remember.</span></h2>
             <p>You shouldn't have to repeat the same instructions on every RX. Pi records how you like your restorations and applies those preferences to future cases.</p>
             <div class="pref-tags"><span>Contact</span><span>Occlusion</span><span>Contour</span><span>Stain</span><span>Pontic</span><span>Case Notes</span></div>
+            <div class="profile-demo-actions">
+              <button class="btn btn-mint open-profile">Build My Preference Profile <span class="btn-arrow">↗</span></button>
+            </div>
+            <p class="profile-demo-note">Interactive preview · about 30 seconds</p>
           </div>
 
-          <div class="pref-console">
-            <div class="console-top"><span class="console-title">Doctor Preference Profile</span><span class="saved-badge">Saved</span></div>
+          <div class="pref-console open-profile" role="button" tabindex="0" aria-label="Open preference profile demo">
+            <div class="console-top"><span class="console-title">Doctor Preference Profile</span><span class="saved-badge">Learns + Saves</span></div>
             <div class="console-grid">
-              <div class="console-item"><small>Contact</small><strong>+0.01 mm</strong></div>
-              <div class="console-item"><small>Occlusion</small><strong>−0.20 mm</strong></div>
-              <div class="console-item"><small>Occlusal Stain</small><strong>None</strong></div>
-              <div class="console-item"><small>Pontic</small><strong>Ovate</strong></div>
-              <div class="console-item wide"><small>Profile Rule</small><strong>Apply this doctor's preferences to future cases.</strong></div>
+              <div class="console-item"><small>Contact</small><strong id="previewContact">Broad + Tight</strong></div>
+              <div class="console-item"><small>Bite</small><strong id="previewBite">2 Points Touch</strong></div>
+              <div class="console-item"><small>Implant Contact</small><strong id="previewImplant">Regular</strong></div>
+              <div class="console-item"><small>Anterior</small><strong id="previewAnterior">HT Layered</strong></div>
+              <div class="console-item wide"><small>Profile Rule</small><strong>Your next case starts with what we learned from the last one.</strong></div>
             </div>
-            <div class="console-note"><span>Goal</span><strong>Less chairside adjustment · More consistency</strong></div>
+            <div class="console-note"><span>Goal</span><strong>Less re-explaining · More consistency</strong></div>
+            <div class="console-try"><span>Try the 30-second profile</span><b>↗</b></div>
           </div>
         </div>
       </div>
@@ -455,6 +613,219 @@
     <div class="wrap footer-row"><div>© 2026 Pi Dental Lab · Irvine · San Jose</div><div class="footer-links"><a href="#why">Why Pi</a><a href="#services">Services</a><a href="#locations">Locations</a><a href="#trial">Free Trial</a></div></div>
   </footer>
 
+
+  <div class="profile-modal-bg" id="profileModal" role="dialog" aria-modal="true" aria-labelledby="profileQuestion">
+    <div class="profile-modal">
+      <div class="profile-modal-header">
+        <div class="profile-brand"><span class="mini-pi">π</span><span>PI · DOCTOR PROFILE</span></div>
+        <button class="profile-close" id="closeProfile" aria-label="Close preference profile">×</button>
+      </div>
+      <div class="profile-progress-shell"><div class="profile-progress" id="profileProgress"></div></div>
+
+      <div class="profile-stage">
+        <div id="questionFlow">
+
+          <!-- STEP 1: CONTACT -->
+          <section class="profile-step active" data-step="0" data-key="contact">
+            <div class="profile-overline">01 · Contact</div>
+            <h3 class="profile-question" id="profileQuestion">How do you like your contacts?</h3>
+            <p class="profile-sub">Choose one default. We can still fine-tune individual cases later.</p>
+
+            <div class="option-grid four">
+              <button class="option-card rich" data-value="Point + Light">
+                <span class="option-chip">Point · Light</span>
+                <div class="option-icon">
+                  <div class="contact-visual"><span class="tooth-shape"></span><span class="contact-dot"></span><span class="tooth-shape"></span></div>
+                </div>
+                <div class="option-title">Point + Light</div>
+                <div class="option-desc">A smaller contact area with lighter resistance.</div>
+                <div class="option-meta">
+                  <div class="option-pro"><b>Benefit</b><span>Easy seating and minimal chairside adjustment.</span></div>
+                  <div class="option-con"><b>Trade-off</b><span>Less contact area and may feel lighter than some doctors prefer.</span></div>
+                </div>
+              </button>
+
+              <button class="option-card rich" data-value="Point + Tight">
+                <span class="option-chip">Point · Tight</span>
+                <div class="option-icon">
+                  <div class="contact-visual"><span class="tooth-shape"></span><span class="contact-dot"></span><span class="tooth-shape"></span></div>
+                </div>
+                <div class="option-title">Point + Tight</div>
+                <div class="option-desc">A concentrated contact with firmer resistance.</div>
+                <div class="option-meta">
+                  <div class="option-pro"><b>Benefit</b><span>Defined contact with a secure, positive feel.</span></div>
+                  <div class="option-con"><b>Trade-off</b><span>More likely to need minor contact adjustment if the model/scan differs clinically.</span></div>
+                </div>
+              </button>
+
+              <button class="option-card rich" data-value="Broad + Light">
+                <span class="option-chip">Broad · Light</span>
+                <div class="option-icon">
+                  <div class="contact-visual"><span class="tooth-shape"></span><span class="contact-band"></span><span class="tooth-shape"></span></div>
+                </div>
+                <div class="option-title">Broad + Light</div>
+                <div class="option-desc">A wider contact area with lighter resistance.</div>
+                <div class="option-meta">
+                  <div class="option-pro"><b>Benefit</b><span>Broader contact area while still prioritizing easy seating.</span></div>
+                  <div class="option-con"><b>Trade-off</b><span>May feel less firm than a tighter broad contact.</span></div>
+                </div>
+              </button>
+
+              <button class="option-card rich" data-value="Broad + Tight">
+                <span class="option-chip">Broad · Tight</span>
+                <div class="option-icon">
+                  <div class="contact-visual"><span class="tooth-shape"></span><span class="contact-band"></span><span class="tooth-shape"></span></div>
+                </div>
+                <div class="option-title">Broad + Tight</div>
+                <div class="option-desc">A wider contact area with firmer resistance.</div>
+                <div class="option-meta">
+                  <div class="option-pro"><b>Benefit</b><span>Strong proximal contact with a broad contact zone.</span></div>
+                  <div class="option-con"><b>Trade-off</b><span>Highest chance of requiring chairside contact adjustment.</span></div>
+                </div>
+              </button>
+            </div>
+          </section>
+
+          <!-- STEP 2: BITE -->
+          <section class="profile-step" data-step="1" data-key="bite">
+            <div class="profile-overline">02 · Bite</div>
+            <h3 class="profile-question">How do you like the bite?</h3>
+            <p class="profile-sub">This tells us how much occlusal contact you want to see as your routine starting point.</p>
+
+            <div class="option-grid three">
+              <button class="option-card rich" data-value="Very Light">
+                <span class="option-chip">Very Light</span>
+                <div class="option-icon"><div class="bite-pair"><span class="bite-mark faint"></span></div></div>
+                <div class="option-title">Very Light</div>
+                <div class="option-desc">Minimal occlusal marking.</div>
+                <div class="option-meta">
+                  <div class="option-pro"><b>Benefit</b><span>Lowest chance of a high bite and less chairside reduction.</span></div>
+                  <div class="option-con"><b>Trade-off</b><span>May feel too light if you prefer more definite centric contact.</span></div>
+                </div>
+              </button>
+
+              <button class="option-card rich" data-value="2 Points Touch">
+                <span class="option-chip">Balanced</span>
+                <div class="option-icon"><div class="bite-pair"><span class="bite-mark"></span><span class="bite-mark"></span></div></div>
+                <div class="option-title">2 Points Touch</div>
+                <div class="option-desc">Two defined centric contact points.</div>
+                <div class="option-meta">
+                  <div class="option-pro"><b>Benefit</b><span>A clear, repeatable bite target without making the occlusion intentionally heavy.</span></div>
+                  <div class="option-con"><b>Trade-off</b><span>Small clinical bite-record differences can still require minor adjustment.</span></div>
+                </div>
+              </button>
+
+              <button class="option-card rich" data-value="Heavy">
+                <span class="option-chip">Heavy</span>
+                <div class="option-icon"><div class="bite-heavy"><span class="bite-mark"></span><span class="bite-mark"></span><span class="bite-mark"></span></div></div>
+                <div class="option-title">Heavy</div>
+                <div class="option-desc">More pronounced occlusal contact.</div>
+                <div class="option-meta">
+                  <div class="option-pro"><b>Benefit</b><span>Provides a more definite occlusal stop if that is your preference.</span></div>
+                  <div class="option-con"><b>Trade-off</b><span>Most likely to need chairside bite adjustment if records differ from the mouth.</span></div>
+                </div>
+              </button>
+            </div>
+          </section>
+
+          <!-- STEP 3: IMPLANT CONTACT -->
+          <section class="profile-step" data-step="2" data-key="implantContact">
+            <div class="profile-overline">03 · Implant Contact</div>
+            <h3 class="profile-question">For implant crowns, do you want a contact you can modify later?</h3>
+            <p class="profile-sub">Choose your default implant contact design. This is the kind of preference Pi keeps under your profile.</p>
+
+            <div class="option-grid">
+              <button class="option-card rich" data-value="Regular Contact">
+                <span class="option-chip">Traditional</span>
+                <div class="option-icon">
+                  <div class="implant-visual"><span class="implant-crown"></span><span class="implant-neighbor"></span></div>
+                </div>
+                <div class="option-title">Regular Contact</div>
+                <div class="option-desc">Conventional zirconia/ceramic proximal contact.</div>
+                <div class="option-meta">
+                  <div class="option-pro"><b>Benefit</b><span>Simple one-material design with a clean conventional finish.</span></div>
+                  <div class="option-con"><b>Trade-off</b><span>If the proximal contact needs to be increased later, chairside modification is less convenient.</span></div>
+                </div>
+              </button>
+
+              <button class="option-card rich" data-value="Composite Contact Box">
+                <span class="option-chip">Future-Friendly</span>
+                <div class="option-icon">
+                  <div class="implant-visual"><span class="implant-crown"></span><span class="composite-box"></span><span class="implant-neighbor"></span></div>
+                </div>
+                <div class="option-title">Composite Contact Box</div>
+                <div class="option-desc">A composite-manageable proximal zone intended to make future contact addition easier.</div>
+                <div class="option-meta">
+                  <div class="option-pro"><b>Benefit</b><span>Gives the doctor a more convenient way to add or modify proximal contact chairside later.</span></div>
+                  <div class="option-con"><b>Trade-off</b><span>Adds another material interface and may require future composite maintenance or polishing.</span></div>
+                </div>
+              </button>
+            </div>
+
+            <div class="profile-soft-note"><strong>Why we ask:</strong> implant contact preferences are not always the same as natural-tooth crown preferences. Pi can remember the difference.</div>
+          </section>
+
+          <!-- STEP 4: ANTERIOR -->
+          <section class="profile-step" data-step="3" data-key="anterior">
+            <div class="profile-overline">04 · Anterior Esthetics</div>
+            <h3 class="profile-question">For anterior zirconia, what's your default?</h3>
+            <p class="profile-sub">Choose the workflow you want us to start with when the prescription does not specify otherwise.</p>
+
+            <div class="option-grid">
+              <button class="option-card rich" data-value="HT Layered">
+                <span class="option-chip">Esthetic</span>
+                <div class="option-icon">
+                  <div class="anterior-visual"><span class="ant-tooth layered"></span><span class="ant-tooth layered"></span><span class="ant-tooth layered"></span></div>
+                </div>
+                <div class="option-title">HT Layered</div>
+                <div class="option-desc">High-translucency zirconia with added layering/characterization where indicated.</div>
+                <div class="option-meta">
+                  <div class="option-pro"><b>Benefit</b><span>More depth, translucency and characterization for demanding esthetic cases.</span></div>
+                  <div class="option-con"><b>Trade-off</b><span>More technique-sensitive, usually more time-intensive, and the layered porcelain surface can be more vulnerable than a fully monolithic restoration.</span></div>
+                </div>
+              </button>
+
+              <button class="option-card rich" data-value="Normal Block / Monolithic">
+                <span class="option-chip">Predictable</span>
+                <div class="option-icon">
+                  <div class="anterior-visual"><span class="ant-tooth block"></span><span class="ant-tooth block"></span><span class="ant-tooth block"></span></div>
+                </div>
+                <div class="option-title">Normal Block</div>
+                <div class="option-desc">A monolithic block-based workflow with stain and glaze as needed.</div>
+                <div class="option-meta">
+                  <div class="option-pro"><b>Benefit</b><span>Strong, efficient and predictable with no veneering porcelain layer to chip.</span></div>
+                  <div class="option-con"><b>Trade-off</b><span>Can offer less layered depth and characterization in highly demanding anterior shade-matching cases.</span></div>
+                </div>
+              </button>
+            </div>
+
+            <div class="profile-soft-note"><strong>Nothing is locked forever.</strong> If you tell us “layer only #8,” “less translucent,” or “use block for this patient,” we save that feedback too.</div>
+          </section>
+        </div>
+
+        <section class="profile-save-screen" id="profileSaved">
+          <div class="saved-orb">✓</div>
+          <div class="saved-message">Saved under your Pi profile</div>
+          <h3>Now we know how you work.</h3>
+          <p class="save-sub">These become your starting preferences. Future feedback can keep refining the profile case by case.</p>
+          <div class="profile-summary" id="profileSummary"></div>
+          <div class="save-tagline">Every future case starts with what we learned.</div>
+          <div class="save-actions">
+            <button class="btn btn-black" id="saveAndTrial">Save Profile & Start 3 Free Cases <span class="btn-arrow">↗</span></button>
+            <button class="btn btn-ghost" id="restartProfile" style="color:#0b0d12;border-color:rgba(11,13,18,.15)">Edit Answers</button>
+          </div>
+          <p class="save-note">Interactive website demo: the draft is stored in this browser until the trial request is submitted.</p>
+        </section>
+
+        <div class="profile-nav" id="profileNav">
+          <button class="profile-back" id="profileBack">← Back</button>
+          <span class="question-counter" id="questionCounter">1 / 4</span>
+          <button class="profile-next" id="profileNext">Continue →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="modal-bg" id="trialModal" role="dialog" aria-modal="true" aria-labelledby="trialTitle">
     <div class="modal">
       <div class="modal-top"><div><div class="kicker">New Practice Trial</div><h3 id="trialTitle">Request your 3 trial cases.</h3></div><button class="modal-close" id="closeModal" aria-label="Close">×</button></div>
@@ -480,21 +851,209 @@
     const nav = document.getElementById('nav');
     const modal = document.getElementById('trialModal');
     const toast = document.getElementById('toast');
+
+    // ---------- Navigation ----------
     addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 15));
-    document.querySelectorAll('.open-trial').forEach(el => el.addEventListener('click', e => { e.preventDefault(); modal.classList.add('open'); document.body.style.overflow='hidden'; }));
-    function closeModal(){ modal.classList.remove('open'); document.body.style.overflow=''; }
+
+    // ---------- Trial form ----------
+    document.querySelectorAll('.open-trial').forEach(el => el.addEventListener('click', e => {
+      e.preventDefault();
+      modal.classList.add('open');
+      document.body.style.overflow='hidden';
+    }));
+
+    function closeModal(){
+      modal.classList.remove('open');
+      if(!document.getElementById('profileModal').classList.contains('open')) document.body.style.overflow='';
+    }
     document.getElementById('closeModal').addEventListener('click', closeModal);
     modal.addEventListener('click', e => { if(e.target === modal) closeModal(); });
-    addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+
+    // ---------- Interactive doctor profile ----------
+    const profileModal = document.getElementById('profileModal');
+    const profileSteps = [...document.querySelectorAll('.profile-step')];
+    const profileProgress = document.getElementById('profileProgress');
+    const profileNext = document.getElementById('profileNext');
+    const profileBack = document.getElementById('profileBack');
+    const profileNav = document.getElementById('profileNav');
+    const profileSaved = document.getElementById('profileSaved');
+    const profileSummary = document.getElementById('profileSummary');
+    const questionFlow = document.getElementById('questionFlow');
+    const questionCounter = document.getElementById('questionCounter');
+    let currentStep = 0;
+
+    let profile = {
+      contact: "",
+      bite: "",
+      implantContact: "",
+      anterior: ""
+    };
+
+    try{
+      const stored = JSON.parse(localStorage.getItem('piPreferenceProfile') || 'null');
+      if(stored && typeof stored === 'object') profile = {...profile, ...stored};
+    }catch(e){}
+
+    function openProfile(){
+      profileModal.classList.add('open');
+      document.body.style.overflow='hidden';
+      showStep(0);
+    }
+    function closeProfile(){
+      profileModal.classList.remove('open');
+      if(!modal.classList.contains('open')) document.body.style.overflow='';
+    }
+
+    document.querySelectorAll('.open-profile').forEach(el => {
+      el.addEventListener('click', e => { e.preventDefault(); openProfile(); });
+      el.addEventListener('keydown', e => { if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openProfile(); }});
+    });
+    document.getElementById('closeProfile').addEventListener('click', closeProfile);
+    profileModal.addEventListener('click', e => { if(e.target === profileModal) closeProfile(); });
+
+    function showStep(n){
+      currentStep = Math.max(0, Math.min(profileSteps.length - 1, n));
+      questionFlow.style.display = '';
+      profileSaved.classList.remove('active');
+      profileNav.style.display = 'flex';
+
+      profileSteps.forEach((step, idx) => step.classList.toggle('active', idx === currentStep));
+      const step = profileSteps[currentStep];
+      const key = step.dataset.key;
+      const value = profile[key];
+
+      step.querySelectorAll('.option-card').forEach(card => {
+        card.classList.toggle('selected', card.dataset.value === value);
+      });
+
+      profileProgress.style.width = ((currentStep + 1) / profileSteps.length * 100) + '%';
+      questionCounter.textContent = `${currentStep + 1} / ${profileSteps.length}`;
+      profileBack.style.visibility = currentStep === 0 ? 'hidden' : 'visible';
+      profileNext.textContent = currentStep === profileSteps.length - 1 ? 'Save My Profile →' : 'Continue →';
+      profileNext.classList.toggle('ready', !!value);
+    }
+
+    profileSteps.forEach(step => {
+      step.querySelectorAll('.option-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const key = step.dataset.key;
+          profile[key] = card.dataset.value;
+          step.querySelectorAll('.option-card').forEach(c => c.classList.toggle('selected', c === card));
+          profileNext.classList.add('ready');
+
+          // quick, modern flow: advance automatically after a short beat
+          if(currentStep < profileSteps.length - 1){
+            setTimeout(() => showStep(currentStep + 1), 220);
+          }
+        });
+      });
+    });
+
+    profileNext.addEventListener('click', () => {
+      const key = profileSteps[currentStep].dataset.key;
+      if(!profile[key]) return;
+      if(currentStep < profileSteps.length - 1) showStep(currentStep + 1);
+      else saveProfile();
+    });
+
+    profileBack.addEventListener('click', () => showStep(currentStep - 1));
+
+    function saveProfile(){
+      try{ localStorage.setItem('piPreferenceProfile', JSON.stringify(profile)); }catch(e){}
+      questionFlow.style.display = 'none';
+      profileNav.style.display = 'none';
+      profileSaved.classList.add('active');
+      profileProgress.style.width = '100%';
+
+      const rows = [
+        ['Contact', profile.contact],
+        ['Bite', profile.bite],
+        ['Implant Contact', profile.implantContact],
+        ['Anterior Default', profile.anterior]
+      ];
+
+      profileSummary.innerHTML = rows.map(([label,value]) =>
+        `<div class="summary-item"><small>${label}</small><strong>${value || '—'}</strong></div>`
+      ).join('');
+
+      // Update the page preview so the interaction feels persistent
+      document.getElementById('previewContact').textContent = profile.contact || '—';
+      document.getElementById('previewBite').textContent = profile.bite || '—';
+      document.getElementById('previewImplant').textContent = profile.implantContact || '—';
+      document.getElementById('previewAnterior').textContent = profile.anterior || '—';
+    }
+
+    document.getElementById('restartProfile').addEventListener('click', () => showStep(0));
+
+    document.getElementById('saveAndTrial').addEventListener('click', () => {
+      closeProfile();
+      const notes = document.querySelector('#trialForm textarea[name="notes"]');
+      const prefText =
+`Doctor Preference Profile:
+- Contact: ${profile.contact}
+- Bite: ${profile.bite}
+- Implant Contact: ${profile.implantContact}
+- Anterior Default: ${profile.anterior}`;
+      notes.value = notes.value ? notes.value + '\n\n' + prefText : prefText;
+      modal.classList.add('open');
+      document.body.style.overflow='hidden';
+    });
+
+    // Restore preview from browser storage if it exists
+    if(Object.values(profile).some(Boolean)){
+      document.getElementById('previewContact').textContent = profile.contact || 'Broad + Tight';
+      document.getElementById('previewBite').textContent = profile.bite || '2 Points Touch';
+      document.getElementById('previewImplant').textContent = profile.implantContact || 'Regular Contact';
+      document.getElementById('previewAnterior').textContent = profile.anterior || 'HT Layered';
+    }
+
+    // Optional gentle prompt: only once per browser session, once the preference section is in view.
+    let profileNudged = false;
+    const prefSection = document.getElementById('preferences');
+    if('IntersectionObserver' in window){
+      const observer = new IntersectionObserver(entries => {
+        if(entries[0].isIntersecting && !profileNudged && !sessionStorage.getItem('piProfileNudged')){
+          profileNudged = true;
+          sessionStorage.setItem('piProfileNudged','1');
+          const consoleCard = document.querySelector('.pref-console');
+          consoleCard.animate(
+            [{transform:'rotate(1deg) scale(1)'},{transform:'rotate(0deg) scale(1.025)'},{transform:'rotate(1deg) scale(1)'}],
+            {duration:700,easing:'ease'}
+          );
+        }
+      }, {threshold:.55});
+      observer.observe(prefSection);
+    }
+
+    // ---------- Trial submission ----------
     document.getElementById('trialForm').addEventListener('submit', async e => {
       e.preventDefault();
       const d = Object.fromEntries(new FormData(e.currentTarget).entries());
-      const body = `PI DENTAL LAB — NEW PRACTICE TRIAL REQUEST\n\nDoctor: ${d.doctor}\nPractice: ${d.practice}\nEmail: ${d.email}\nPhone: ${d.phone || '-'}\nCase Type: ${d.type}\nWorkflow: ${d.workflow}\n\nNotes:\n${d.notes || '-'}`;
+      const body = `PI DENTAL LAB — NEW PRACTICE TRIAL REQUEST
+
+Doctor: ${d.doctor}
+Practice: ${d.practice}
+Email: ${d.email}
+Phone: ${d.phone || '-'}
+Case Type: ${d.type}
+Workflow: ${d.workflow}
+
+Notes:
+${d.notes || '-'}`;
       try{ await navigator.clipboard.writeText(body); }catch(err){}
       if(CONFIG.salesEmail && !CONFIG.salesEmail.startsWith('REPLACE_')){
         location.href = `mailto:${CONFIG.salesEmail}?subject=${encodeURIComponent('Pi Dental Lab Trial Request — ' + d.practice)}&body=${encodeURIComponent(body)}`;
       } else {
-        toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 2400);
+        toast.textContent = 'Trial request copied.';
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2400);
+      }
+    });
+
+    addEventListener('keydown', e => {
+      if(e.key === 'Escape'){
+        if(profileModal.classList.contains('open')) closeProfile();
+        else if(modal.classList.contains('open')) closeModal();
       }
     });
   </script>
